@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Application -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".GeneralMenus.MainMenu" />
+        <activity android:name=".WorldOfDarkness.WOD_Menu" />
+        <activity android:name=".WorldOfDarkness.WODVTM" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANS" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANS_Camarilla" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANSBrujah" />
+        <activity android:name=".WorldOfDarkness.BrujahHistoryVTM" />
+        <activity android:name=".WorldOfDarkness.charSheetVTM" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANSGangrel" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANSNosferatu" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANSMalkavian" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANSVentrue" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANSToreador" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANSTremere" />
+        <activity android:name=".WorldOfDarkness.WODVTMCLANS_Sabbat" />
+        <activity android:name=".BESM_Main_Menu" />
+        <activity android:name=".charBESM" />
+        <activity android:name=".AnimaBeyondFantasy.ABFTools" />
+        <activity android:name=".AnimaBeyondFantasy.ABFCharGenMenu" />
+        <activity android:name=".AnimaBeyondFantasy.ABFCombatTools" />
+        <activity android:name=".AnimaBeyondFantasy.ABFMeleeCombat" />
+        <activity android:name=".AnimaBeyondFantasy.ABFConfigureMeleeCharacter" />
+        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_BasicInfo" />
+        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_ClassAndRace" />
+        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_CombatAbilities" />
+        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_MagicAbilities" />
+        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_Characteristics" />
+        <activity android:name=".SaveToFile" />
+        <activity android:name=".PandPMainMenu">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".GeneralMenus.Login"></activity>
+    </application>
+
+</manifest>

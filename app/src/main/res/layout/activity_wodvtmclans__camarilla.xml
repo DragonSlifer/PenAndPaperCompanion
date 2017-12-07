@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_wodvtmclans__camarilla"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.WorldOfDarkness.WODVTMCLANS_Camarilla">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:text="@string/brujah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/brujahButton"
+                android:onClick="gotoBrujah" />
+
+            <Button
+                android:text="@string/malkavian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/malkavianButton"
+                android:onClick="gotoMalkavian" />
+
+            <Button
+                android:text="@string/nosferatu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nosferatuButton"
+                android:onClick="gotoNosferatu" />
+
+            <Button
+                android:text="@string/toreador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/toreadorButton"
+                android:onClick="gotoToreador" />
+
+            <Button
+                android:text="@string/tremere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tremereButton"
+                android:onClick="gotoTremere" />
+
+            <Button
+                android:text="@string/ventrue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ventrueButton"
+                android:onClick="gotoVentrue" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

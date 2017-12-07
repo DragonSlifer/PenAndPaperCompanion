@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RPG - Pen and Paper Companion</string>
+    <string name="character_creation">Creación de Personajes</string>
+    <string name="alliances">Alianzas</string>
+    <string name="clans">Clanes</string>
+    <string name="common_dice_pools">Tiradas típicas</string>
+    <string name="create_new_character">Crear Personaje Nuevo</string>
+    <string name="disciplines">Disciplinas</string>
+    <string name="go_back">Atras</string>
+    <string name="my_characters">Mis Personajes</string>
+    <string name="signature_characters">Personajes Importantes</string>
+    <string name="tables">Tablas</string>
+    <string name="the_traditions">Las Tradiciones</string>
+    <string name="attributes">Atributos</string>
+    <string name="basic_information">Información Básica</string>
+    <string name="character">Personaje:</string>
+    <string name="chronicle">Crónica:</string>
+    <string name="clan">Clan:</string>
+    <string name="introduce_the_chronicle_s_name">Nombre de la Crónica</string>
+    <string name="introduce_your_character_name">Nombre del Personaje</string>
+    <string name="introduce_your_name">Tu Nombre</string>
+    <string name="player">Jugador:</string>
+    <string name="character_creation_tips">Consejos de Creación de Personajes</string>
+    <string name="stereotypes">Estereotipos</string>
+    <string name="history">Historia</string>
+    <string name="historyBrujah">El legado de los Brujah es uno de dorados tiempos pasados arruinados por sus fogosas naturalezas. Suya fue la gloria de la antigua Cartago, pero la traición de los Ventrue de Roma acabó con el sueño. Desde entonces, los Brujah les han guardado rencor. En las noches actuales, los Brujah son rebeldes y provocadores, pandilleros que llevan bates y agentes del cambio en una sociedad paralizada desde hace mucho. Como rebeldes que son, está en su naturaleza desafiar el status quo... aunque, a veces, cuando no encuentran oposición, ellos mismos personifican el status quo. Funciona bien, pues siempre hay un Brujah exaltado esperando entre bastidores para derrocar a un compañero de Clan al que se le han subido los humos y que está demasiado cómodo en su papel de rebelde convertido en dictador. Más que ningún otro Clan, los Brujah aún sienten las llamas de las pasiones que los inspiraron siendo mortales. Aman las causas y son rápidos en actuar ante discursos emotivos, acusaciones de injusticia o llamadas a las armas. Esta conexión con las pasiones puede ser una bendición, pero la inspiración también puede llevar a la locura y el Ansia de la Bestia. Ningún Príncipe sabio da la espalda a los Brujah. Es raro que la Chusma permita que la manipulen o que la adulen. Ante todo, un Brujah es su propio amo, y aquéllos que quieran someterlo se enfrentan a una difícil tarea. Si uno de ellos piensa que le están dando la pajita más corta, hará trizas a sus enemigos primero y después, quizás, recuerde hacer preguntas, sin importarle si es un Primogénito o una autoridad mortal. Algunos historiadores de los Vástagos afirman que los Brujah se excusan en la antigua traición que sufrieron para adoptar el papel de agitadores contra el mismo orden que ayudan a sostener. Otros aseguran que los Brujah se han sometido a la voluntad de ese mismo orden, siendo poco más que una oposición leal sin poder alguno. A la mayoría de los Brujah les da lo mismo mientras alguien necesite una buena patada en el culo y puedan ser ellos quienes la den.</string>
+    <string name="brujah">Brujah</string>
+    <string name="demon_the_fall">Demonio: La Caida</string>
+    <string name="dhampyr_half_damned">Dhampyros: Los Semi-Condenados</string>
+    <string name="gangrel">Gangrel</string>
+    <string name="kue_jin_kindred_of_the_east">Kue-jin: Estirpe de Oriente</string>
+    <string name="mage_dark_ages">Mago: Edad Oscura</string>
+    <string name="malkavian">Malkavian</string>
+    <string name="mage_the_ascension">Mago: La ascension</string>
+    <string name="nosferatu">Nosferatu</string>
+    <string name="select_the_game_you_want">Selecciona el juego que quieras</string>
+    <string name="toreador">Toreador</string>
+    <string name="tremere">Tremere</string>
+    <string name="vampire_dark_ages">Vampiro: Edad Oscura</string>
+    <string name="vampire_the_masquerade">Vampiro: La Mascarada</string>
+    <string name="ventrue">Ventrue</string>
+    <string name="werewolf_dark_ages">Hombre Lobo: Edad Oscura</string>
+    <string name="werewolf_the_apocalypse">Hombre Lobo: El apocalipsis</string>
+    <string name="textview">Selecciona el Universo que quieras</string>
+    <string name="wodButton">Mundo de Tinieblas</string>
+    <string name="superheroes_inc">Superheroes INC</string>
+    <string name="call_of_cthulhu">La llamada de Cthulhu</string>
+    <string name="brp_chaosium">BRP - Chaosium</string>
+    <string name="besm">BESM - Juego de rol Anime</string>
+    <string name="hits">HITOS</string>
+    <string name="fate">FATE</string>
+    <string name="cyberpunk">Cyberpunk</string>
+    <string name="not_implemented_yet">Esta característica no esta implementada todavia</string>
+    <string name="blood_variances">Variaciones de Sangre</string>
+    <string name="bloodlines">Lineas de Sangre</string>
+    <string name="camarilla_clans">Clanes de la Camarilla</string>
+    <string name="independent_clans">Clanes Independientes</string>
+    <string name="lasombra">Lasombra</string>
+    <string name="sabbat_clans">Clanes del Sabbat</string>
+    <string name="physics">Físicos</string>
+    <string name="tzimisce">Tzimisce</string>
+    <string name="power">Fuerza</string>
+    <string name="dexterity">Destreza</string>
+    <string name="d20">D20</string>
+    <string name="strength">Fuerza</string>
+    <string name="stamina">Resistencia</string>
+    <string name="appearance">Apariencia</string>
+    <string name="charisma">Carisma</string>
+    <string name="manipulation">Manipulación</string>
+    <string name="socials">Sociales</string>
+    <string name="intelligence">Inteligencia</string>
+    <string name="mentals">Mentales</string>
+    <string name="perception">Percepción</string>
+    <string name="wits">Astucia</string>
+    <string name="abillities">Habilidades</string>
+    <string name="general_info">Información general</string>
+    <string name="chat">Chat</string>
+    <string name="general_character_information">Información General</string>
+    <string name="add_classes">Añadir Clases</string>
+    <string name="add_races">Añadir Razas</string>
+    <string name="character_generator">Generador de Personajes</string>
+    <string name="combat_tools">Herramientas de Combate</string>
+    <string name="delivered_text"></string>
+    <string name="dice_roller">Lanzador de Dados</string>
+    <string name="herramientas_de_anima_beyond_fantasy">Anima Beyond Fantasy</string>
+    <string name="action_reference_chart">Tabla de Referencia de Acciones</string>
+    <string name="aimed_attacks_reference_chart">Tabla de Ataques Apuntados</string>
+    <string name="att_dam">puntos de daño</string>
+    <string name="att_los">El defensor gana y puede contraatacar</string>
+    <string name="att_win">"El atacante gana y provoca: "</string>
+    <string name="att_win_botch">"El atacante gana con pifia del defensor y provoca: "</string>
+    <string name="attack_hability">H. Ataque</string>
+    <string name="attacker">Atacante</string>
+    <string name="attack_damage">Daño</string>
+    <string name="block">Parada</string>
+    <string name="botchlevel">"La pifia es de "</string>
+    <string name="button">Botón</string>
+    <string name="combat_technics_definition">Técnicas de Combate</string>
+    <string name="damage_calculator">Calculadora de Daño</string>
+    <string name="defender">Defensor</string>
+    <string name="defense_abitilty">H. Defensa</string>
+    <string name="dodge">Esquivar</string>
+    <string name="magic_in_combat">Magia en Combate</string>
+    <string name="melee_combat">Combate Cuerpo a Cuerpo</string>
+    <string name="result_n">RESULTADO</string>
+    <string name="save_attacker_data"></string>
+    <string name="set_the_modifiers">Pon los Modificadores</string>
+    <string name="weapon_breakage_calculator">Calculadora de Rotura de Armas</string>
+    <string name="weapons_refference_chart">Tabla de Armas</string>
+    <!-- ANIMA BEYOND FANTASY ARRAYS-->
+    <!-- Combat modifier values and names-->
+    <string-array name="ABFCCModifiers"> <!-- Modifier names -->
+        <item>Flanco</item>
+        <item>Espalda</item>
+        <item>Sorpresa</item>
+        <item>Ceguera Parcial</item>
+        <item>Ceguera Total</item>
+        <item>Posición elevada</item>
+        <item>Derribado</item>
+        <item>Paralisis Menor</item>
+        <item>Paralisis Mayor</item>
+        <item>Paralisis Total</item>
+        <item>Amenazado</item>
+        <item>Levitando</item>
+        <item>Vuelo (tipo 7 a 14)</item>
+        <item>Vuelo (tipo 15 o más)</item>
+        <item>Cargandp</item>
+        <item>Desenvainar</item>
+        <item>Espacio Reducido</item>
+        <item>Adversario Pequeño</item>
+        <item>Adversario Muy Pequeño</item>
+    </string-array>
+    <string-array name="ABFCCMValuesAttack">
+        <item>-10</item>
+        <item>-30</item>
+        <item>0</item>
+        <item>-30</item>
+        <item>-100</item>
+        <item>20</item>
+        <item>-30</item>
+        <item>-20</item>
+        <item>-80</item>
+        <item>-200</item>
+        <item>-20</item>
+        <item>-20</item>
+        <item>10</item>
+        <item>15</item>
+        <item>10</item>
+        <item>-25</item>
+        <item>-40</item>
+        <item>-10</item>
+        <item>-20</item>
+    </string-array>
+    <string-array name="ABFCCMValuesDodge">
+        <item>-30</item>
+        <item>-80</item>
+        <item>-90</item>
+        <item>-15</item>
+        <item>-80</item>
+        <item>0</item>
+        <item>-30</item>
+        <item>-40</item>
+        <item>-80</item>
+        <item>-200</item>
+        <item>-120</item>
+        <item>-40</item>
+        <item>10</item>
+        <item>20</item>
+        <item>-20</item>
+        <item>0</item>
+        <item>-40</item>
+        <item>0</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="ABFCCMValuesBlock">
+        <item>-30</item>
+        <item>-80</item>
+        <item>-90</item>
+        <item>-30</item>
+        <item>-80</item>
+        <item>0</item>
+        <item>-30</item>
+        <item>-20</item>
+        <item>-80</item>
+        <item>-200</item>
+        <item>-120</item>
+        <item>-20</item>
+        <item>10</item>
+        <item>10</item>
+        <item>-10</item>
+        <item>-25</item>
+        <item>-40</item>
+        <item>0</item>
+        <item>-10</item>
+    </string-array>
+    <string name="roll_combat">Tirada de Combate</string>
+    <string name="initiative_calculator">Calculadora de Iniciativa</string>
+    <string name="location_refference_chart">Tabla de Referencia de Localizaciones</string>
+    <string name="melee_combat_simulator">Simulador de Combate Cuerpo a Cuerpo</string>
+    <string name="ranged_combat">Combate a Distancia</string>
+    <string name="ranged_combat_refference_charts">Tabla de Combate a Distancia</string>
+    <string name="special_situations_reference_chart">Tabla de Situaciones Especiales</string>
+    <string name="next">Siguiente</string>
+    <string name="com_dev_remember">Desarollo del Combate:\n
+        1. Tira Iniciativa (1d100 + turno)\n
+        2. El atacante tira su habilidad de ataque.\n
+        3. El defensor tira esquivar o parada.\n
+        4. Compara y analiza los resultados.\n
+        (No te olvides de los modificadores si son aplicables)</string>
+    <string name="magic_habilities">Magia</string>
+    <string name="combat_abilities">Combate</string>
+    <string name="class_and_race">Categoria y Raza</string>
+    <string name="character_background_info">Trasfondo del Personaje</string>
+    <string name="grimoires">Grimorios</string>
+    <string name="incarnations">Encarnaciones</string>
+    <string name="inventory">Inventario</string>
+    <string name="ki_abilities">Habilidades Ki</string>
+    <string name="martial_arts">Artes Marciales</string>
+    <string name="psi_patrons">Patrones Psi</string>
+    <string name="psyquic_abilities">Habilidades Psíquicas</string>
+    <string name="weapons">Armas</string>
+    <string name="age">Edad</string>
+    <string name="string_class_info">Categorías</string>
+    <string name="nation_of_origin">Nacionalidad</string>
+    <string name="race">Raza</string>
+    <string name="race_info">Razas</string>
+    <string name="save_character_info">Guardar Personaje</string>
+    <string name="social_status">Estatus social</string>
+    <string name="char_class">Categoría</string>
+    <string name="class_info">Categorías</string>
+    <string name="character_name">Nombre</string>
+    <string name="gender">Género</string>
+    <string name="ethnicity">Étnia</string>
+    <string name="name">Nombre</string>
+    <string name="agi_att">AGI</string>
+    <string name="base">Base</string>
+    <string name="bonus">Bono</string>
+    <string name="character_attributes">Características</string>
+    <string name="characteristic">Característica</string>
+    <string name="con_att">CON</string>
+    <string name="development_points">Puntos de Desarrollo</string>
+    <string name="dex_att">DES</string>
+    <string name="int_att">INT</string>
+    <string name="per_att">PER</string>
+    <string name="pow_att">POD</string>
+    <string name="str_att">FUE</string>
+    <string name="succesful_save">Los datos han sido guardados correctamente.</string>
+    <string name="total">Total</string>
+    <string name="wp_att">VOL</string>
+    <string name="ga_a">Gaïa</string>
+    <string-array name="ABFCategories">
+        <item>Guerrero</item>
+        <item>Guerrero Acróbata</item>
+        <item>Paladín</item>
+        <item>Paladín Oscuro</item>
+        <item>Maestro de Armas</item>
+        <item>Tecnicísta</item>
+        <item>Tao</item>
+        <item>Explorador</item>
+        <item>Sombra</item>
+        <item>Ladrón</item>
+        <item>Asesino</item>
+        <item>Hechicero</item>
+        <item>Warlock</item>
+        <item>Ilusionista</item>
+        <item>Hechicero Mentalista</item>
+        <item>Conjurador</item>
+        <item>Guerrero Conjurador</item>
+        <item>Mentalista</item>
+        <item>Guerrero Mentalista</item>
+        <item>Novel</item>
+    </string-array>
+    <!-- ANIMA BEYOND FANTASY ARRAYS-->
+    <string-array name="ethnicity_array">
+        <item>Asher</item>
+        <item>Aion</item>
+        <item>Tayahar</item>
+        <item>Zinner</item>
+        <item>Ryuan</item>
+        <item>Norne</item>
+        <item>Vildian</item>
+        <item>Daevar</item>
+        <item>Kwa</item>
+        <item>Celsus</item>
+        <item>Dravado</item>
+        <item>Basano</item>
+        <item>Sulem</item>
+        <item>Achí</item>
+        <item>Eruk</item>
+        <item>Roman</item>
+    </string-array>
+    <string-array name="gender_array">
+        <item>Hombre</item>
+        <item>Mujer</item>
+    </string-array>
+    <string-array name="nationality_array">
+        <!-- Abel Empire -->
+        <item>Abel</item>
+        <item>Ilmora</item>
+        <item>Helenia</item>
+        <item>Dalaborn</item>
+        <item>Alberia</item>
+        <item>Galgados</item>
+        <item>Arlan</item>
+        <item>Kanon</item>
+        <!-- The Azur Alliance -->
+        <item>Togarini</item>
+        <item>Remo</item>
+        <item>Belafonte</item>
+        <!-- The Frozen Wasteland -->
+        <item>Goldar</item>
+        <item>Haufman</item>
+        <item>Hendell</item>
+        <!-- The Dark Lands -->
+        <item>Moth</item>
+        <item>Dwänholf</item>
+        <!-- The Comerce Coast -->
+        <item>Gabriel</item>
+        <item>Phaion Eien Seimon</item>
+        <!-- The Episcopal States -->
+        <item>El Dominio</item>
+        <item>Argos</item>
+        <!-- Lands of Al-Enneth -->
+        <item>Kushistan</item>
+        <item>Estigia</item>
+        <item>Salazar</item>
+        <!-- Oriental Lands-->
+        <item>Lannet</item>
+        <item>Shivat</item>
+        <!-- Independent States -->
+        <item>Nanwe</item>
+        <item>Lucrecio</item>
+        <item>Kashmir</item>
+        <item>Baho</item>
+        <!-- The Interior Sea -->
+        <item>El Mar Interior</item>
+        <!-- Eurakia -->
+        <item>Manterra</item>
+        <item>Corinia</item>
+        <item>Arabal</item>
+        <item>Pristina</item>
+        <item>Ygdramar</item>
+        <item>Elcia</item>
+        <item>Espheria</item>
+        <item>Itzi</item>
+        <item>Dafne</item>
+        <item>Bekent</item>
+        <item>Zonas Independientes</item>
+    </string-array>
+    <string name="bestiary">Bestiario</string>
+    <!--
+        This first array works for the following places:
+        -Abel
+        -Ilmora
+        -Togarini
+        -Gabriel
+        -Arabal
+        -Dafne
+    -->
+    <string-array name="social_status_general">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Burguesía</item>
+        <item>Nobleza</item>
+        <item>Alta Nobleza</item>
+    </string-array>
+    <!--
+        This works for:
+        -Dalaborn
+        -Remo
+    -->
+    <string-array name="social_status_general_2">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Nobleza</item>
+        <item>Alta Nobleza</item>
+    </string-array>
+    <!--
+        The following works for:
+        -Alberia
+        -Galgados
+        -Kanon
+        -Argos
+    -->
+    <string-array name="social_status_general_3">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Nobleza</item>
+    </string-array>
+    <!--
+        This works for:
+        -Arlan
+        -Bellafonte
+        -Lucrecio
+        -Espheria
+    -->
+    <string-array name="social_status_general_4">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Burguesía</item>
+        <item>Alta Burguesía</item>
+    </string-array>
+    <!--
+        This works for:
+        -Phaion
+        -Kushistan
+    -->
+    <string-array name="social_status_general_5">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Burguesía</item>
+        <item>Nobleza</item>
+    </string-array>
+    <!--
+        This works for:
+        -Dwanholf
+        -Pristina
+    -->
+    <string-array name="social_status_general_6">
+        <item>Clase Pobre</item>
+        <item>Clase Media</item>
+        <item>Clase Rica</item>
+    </string-array>
+    <string-array name="social_status_helenia">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Nómada</item>
+        <item>Nobleza</item>
+    </string-array>
+    <string-array name="social_status_goldar">
+        <item>Deshonrado/Desterrado</item>
+        <item>Campesino</item>
+        <item>Norteño</item>
+        <item>Erling/Skalmo</item>
+    </string-array>
+    <string-array name="social_status_haufman">
+        <item>Norteño Pobre</item>
+        <item>Norteño</item>
+        <item>Saerinmir</item>
+        <item>Nobleza</item>
+    </string-array>
+    <string-array name="social_status_hendell">
+        <item>Campesino</item>
+        <item>Norteño</item>
+        <item>Lochgjest</item>
+        <item>Primera Casta</item>
+    </string-array>
+    <string-array name="social_status_moth">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Zigeuner</item>
+        <item>Nobleza</item>
+    </string-array>
+    <string-array name="social_status_salazar">
+        <item>Nómada Pobre</item>
+        <item>Nómada Medio</item>
+        <item>Nómada Rico</item>
+    </string-array>
+    <string-array name="social_status_dominion">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Nobleza/Clero</item>
+        <item>Alta Nobleza/Alto Clero</item>
+    </string-array>
+    <string-array name="social_status_nanwe">
+        <item>Nativo Pobre</item>
+        <item>Nativo Medio</item>
+        <item>Clase Media</item>
+        <item>Burguesía</item>
+    </string-array>
+    <string-array name="social_status_kashmir">
+        <item>Habitante Pobre de la Savana </item>
+        <item>Habitante Medio de la Sabana</item>
+        <item>Habitante Rico de la Sabana</item>
+    </string-array>
+    <string-array name="social_status_baho">
+        <item>Sabio Pobre/Guerrero Pobre</item>
+        <item>Sabio Medio/Guerrero Medio</item>
+        <item>Sabio Rico/Guerrero Rico</item>
+    </string-array>
+    <string-array name="social_status_lannet">
+        <item>Clase Baja</item>
+        <item>Burguesía</item>
+        <item>Samurai Cortesano</item>
+        <item>Samurai Guerrero</item>
+    </string-array>
+    <string-array name="social_status_shivat">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Burguesía</item>
+        <item>Burócrata</item>
+        <item>Nobleza</item>
+    </string-array>
+    <string-array name="social_status_manterra">
+        <item>Clase Baja</item>
+        <item>Nativo</item>
+        <item>Clase Media</item>
+        <item>Burguesía</item>
+        <item>Nobleza Asentada</item>
+        <item>Nobleza Independiente</item>
+    </string-array>
+    <string-array name="social_status_corinia">
+        <item>Bárbaro Pobre</item>
+        <item>Colono</item>
+        <item>Bárbaro</item>
+        <item>Privilegiado</item>
+    </string-array>
+    <string-array name="social_status_ygdramar">
+        <item>Plebeyo</item>
+        <item>Caballero</item>
+        <item>Baja Nobleza</item>
+        <item>Alta Nobleza</item>
+    </string-array>
+    <string-array name="social_status_elcia">
+        <item>Clase Baja</item>
+        <item>Miembro de un gremio</item>
+        <item>Clase Alta</item>
+        <item>Nobleza Gremial</item>
+    </string-array>
+    <string-array name="social_status_itzi">
+        <item>Clase Baja</item>
+        <item>Clase Media</item>
+        <item>Clase Alta</item>
+    </string-array>
+    <string-array name="social_status_bekent">
+        <item>Nómada Porbre</item>
+        <item>Nómada</item>
+        <item>Privilegiado</item>
+    </string-array>
+    <string name="same_namefiles_will_be_overwritten">Los archivos de mismo nombre se sobreescribirán</string>
+    <string name="add_nationalities">Agregar Nacionalidades</string>
+    <string name="add_ethnicities">Agregar Étnias</string>
+    <string name="filename">Nombre del Archivo</string>
+
+    <string name="action_settings">Preferencias</string>
+    <string name="cameraMenu">Cámara</string>
+    <string name="navigation_drawer_close">Cerrar menú de navegación</string>
+    <string name="navigation_drawer_open">Abrir menú de navegación</string>
+    <string name="gallery">Galería</string>
+    <string name="tools">Herramientas</string>
+    <string name="communicate">Social</string>
+    <string name="send">Enviar</string>
+    <string name="share">Compartir</string>
+    <string name="delete">Borrar</string>
+    <string name="load">Cargar</string>
+    <string name="new_file">Archivo nuevo</string>
+    <string name="save_new">Guardar Nuevo</string>
+    <string name="update">Actualizar</string>
+    <string name="title_activity_settings">Opciones</string>
+    <string name="anima_beyond_fantasy">Anima Beyond Fantasy</string>
+    <string name="username">Nombre de Usuariop</string>
+    <string name="password">Contraseña</string>
+</resources>

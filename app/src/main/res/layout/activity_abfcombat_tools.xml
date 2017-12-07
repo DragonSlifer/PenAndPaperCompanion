@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/anima_ergo_bearer"
+    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABFCombatTools">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:backgroundTint="@color/transBlack"
+            android:fontFamily="serif-monospace"
+            android:text="@string/combat_tools"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/MeleeButton"
+                    style="@style/ButtonStyleABF"
+                    android:onClick="goto_MeleeCombat"
+                    android:text="@string/melee_combat" />
+
+                <Button
+                    android:id="@+id/RangedCombatButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:text="@string/ranged_combat"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/RangedCombatChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:text="@string/ranged_combat_refference_charts"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/InitCalcButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/initiative_calculator"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/ActRefCharButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/action_reference_chart"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/SpecSitRefChartButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/special_situations_reference_chart"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/ComTechDefButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/combat_technics_definition"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/AimAttRefChartButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/aimed_attacks_reference_chart"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/WeapRefChartButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/weapons_refference_chart"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/WeaBrkCalcButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/weapon_breakage_calculator"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/RanComRefChartButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/ranged_combat_refference_charts"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/LocReffChartButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/location_refference_chart"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <Button
+                    android:id="@+id/MagInComButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/transparent"
+                    android:text="@string/magic_in_combat"
+                    android:textColor="@android:color/holo_red_dark" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

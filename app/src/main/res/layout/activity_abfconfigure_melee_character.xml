@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/anima_melee_calc"
+    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABFConfigureMeleeCharacter">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1">
+
+        <TextView
+            android:id="@+id/roleText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/attacker"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/attack_hability"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/attackValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:textColor="@android:color/holo_red_dark"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/modText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/set_the_modifiers"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp" />
+
+            <com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.MultiSelectionSpinner
+                android:id="@+id/moddersSpinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_weight="6.17" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/attack_damage"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/damageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="number"
+                tools:ignore="LabelFor" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/roleText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/defender"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/defense_abitilty"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/defenseValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberSigned"
+                android:textColor="@android:color/holo_red_dark"
+                tools:ignore="LabelFor" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/modText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/set_the_modifiers"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="18sp" />
+
+            <com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.MultiSelectionSpinner
+                android:id="@+id/moddersSpinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_weight="6.17" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:ignore="UselessParent">
+
+                <RadioButton
+                    android:id="@+id/dodge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/dodge"
+                    android:textColor="@android:color/holo_red_dark" />
+
+                <RadioButton
+                    android:id="@+id/block"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/block"
+                    android:textColor="@android:color/holo_red_dark" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/rollButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00"
+            android:backgroundTint="@color/black"
+            android:onClick="roll"
+            android:text="@string/roll_combat"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/result_n"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="24sp" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vtm_clans">
+        <item>Ahrimanes</item>
+        <item>Anda</item>
+        <item>Angelis Ater</item>
+        <item>Assamita</item>
+        <item>Assamita Antitribu</item>
+        <item>Assamita Hechicero</item>
+        <item>Assamita Visir</item>
+        <item>Baali</item>
+        <item>Brahmanes</item>
+        <item>Brujah</item>
+        <item>Brujah Antitribu</item>
+        <item>Caitiff</item>
+        <item>Capadocio</item>
+        <item>Daitya</item>
+        <item>Gangrel</item>
+        <item>Gangrel Rurales</item>
+        <item>Gangrel Urbanos</item>
+        <item>Gargolas</item>
+        <item>Giovanni</item>
+        <item>Guerreros Setitas</item>
+        <item>Heraldos de las Calaveras</item>
+        <item>Hermanos de Sangre</item>
+        <item>Hijas de la Cacofonía</item>
+        <item>Hijos de Osiris</item>
+        <item>Koldun</item>
+        <item>Kyasid</item>
+        <item>Lamias</item>
+        <item>Lasombra</item>
+        <item>Lasombra Antitribu</item>
+        <item>Lhiannan</item>
+        <item>Malkavian</item>
+        <item>Malkavian Antitribu</item>
+        <item>Malkavian con Dominación</item>
+        <item>Mariner</item>
+        <item>Nagaraja</item>
+        <item>Noiad</item>
+        <item>Nosferatu</item>
+        <item>Nosferatu Antitribu</item>
+        <item>Pander</item>
+        <item>Ravnos</item>
+        <item>Ravnos Antitribu</item>
+        <item>Salubri</item>
+        <item>Salubri Antitribu</item>
+        <item>Samedi</item>
+        <item>Seguidores de Set</item>
+        <item>Serpientes de la Luz</item>
+        <item>Tlacique</item>
+        <item>Toreador</item>
+        <item>Toreador Antitribu</item>
+        <item>Tremere</item>
+        <item>Tremere Antitribu</item>
+        <item>Tremere Telyavos</item>
+        <item>Tzimisce</item>
+        <item>Ventrue</item>
+        <item>Ventrue Antitribu</item>
+        <item>Verdaderos Brujah</item>
+        <item>Viejo Clan Tzimisce</item>
+        <item>Wu Zao</item>
+    </string-array>
+</resources>

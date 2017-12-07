@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_wod__vtm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.WorldOfDarkness.WODVTM">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarStyle="insideOverlay"
+        style="@android:style/Widget.Holo.ScrollView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:text="@string/clans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:id="@+id/clanButton"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:onClick="goto_Clans" />
+
+            <Button
+                android:text="@string/my_characters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/index"
+                android:id="@+id/myCharsButton"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:text="@string/alliances"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/clanButton"
+                android:layout_alignParentStart="true"
+                android:id="@+id/allianceButton"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:text="@string/disciplines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signatureCharactersButton"
+                android:id="@+id/disciplinesButton"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:text="@string/common_dice_pools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/disciplinesButton"
+                android:layout_alignParentStart="true"
+                android:id="@+id/commonDicePoolsButton"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:text="@string/the_traditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/charCreationButton"
+                android:id="@+id/traditionsButton"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:text="@string/character_creation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/allianceButton"
+                android:id="@+id/charCreationButton"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:text="@string/tables"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/commonDicePoolsButton"
+                android:layout_alignParentStart="true"
+                android:id="@+id/tablesButton"
+                android:layout_alignParentEnd="true" />
+
+            <Button
+                android:text="@string/signature_characters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/traditionsButton"
+                android:layout_alignParentStart="true"
+                android:id="@+id/signatureCharactersButton"
+                android:layout_alignParentEnd="true" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:text="@string/go_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/index"
+                    android:onClick="go_back"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:text="@string/create_new_character"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/charCreateButton"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/index"
+                    android:layout_weight="1"
+                    android:onClick="goto_CharCreation" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

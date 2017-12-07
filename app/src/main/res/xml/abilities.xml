@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abilities>
+    <!--English Abilities-->
+    <language name="english">
+        <ability set="athletics" attr="AGI" name="acrobatics">acrobatics</ability>
+        <ability set="athletics" attr="AGI" name="athleticism">athleticism</ability>
+        <ability set="athletics" attr="AGI" name="climb">climb</ability>
+        <ability set="athletics" attr="STR" name="jump">jump</ability>
+        <ability set="athletics" attr="AGI" name="ride">ride</ability>
+        <ability set="athletics" attr="AGI" name="swim">swim</ability>
+        <ability set="creative" attr="POW" name="art">Art</ability>
+        <ability set="creative" attr="AGI" name="dance">Dance</ability>
+        <ability set="creative" attr="DEX" name="forge">Forge</ability>
+        <ability set="creative" attr="POW" name="music">Music</ability>
+        <ability set="creative" attr="DEX" name="sl_of_hand">Sl. of Hand</ability>
+        <ability set="intellectual" attr="INT" name="animals">Animals</ability>
+        <ability set="intellectual" attr="INT" name="appraisal">Appraisal</ability>
+        <ability set="intellectual" attr="INT" name="memorize">Memorize</ability>
+        <ability set="intellectual" attr="INT" name="herbal_lore">Herbal Lore</ability>
+        <ability set="intellectual" attr="INT" name="history">History</ability>
+        <ability set="intellectual" attr="POW" name="m_appraisal">M. Appraisal</ability>
+        <ability set="intellectual" attr="INT" name="medicine">Medicine</ability>
+        <ability set="intellectual" attr="INT" name="navigation">Navigation</ability>
+        <ability set="intellectual" attr="INT" name="occult">Occult</ability>
+        <ability set="intellectual" attr="INT" name="sciences">Sciences</ability>
+        <ability set="perception" attr="PER" name="notice">Notice</ability>
+        <ability set="perception" attr="PER" name="search">Search</ability>
+        <ability set="perception" attr="PER" name="track">Track</ability>
+        <ability set="socials" attr="WP" name="intimidate">Intimidate</ability>
+        <ability set="socials" attr="POW" name="leadership">Leadership</ability>
+        <ability set="socials" attr="INT" name="persuasion">Persuasion</ability>
+        <ability set="socials" attr="POW" name="style">Style</ability>
+    </language>
+    <!--Habilidades en Español-->
+    <language name="spanish">
+        <ability set="athletics" attr="AGI" name="acrobatics">Acrobacias</ability>
+        <ability set="athletics" attr="AGI" name="athleticism">Atletismo</ability>
+        <ability set="athletics" attr="AGI" name="climb">Trepar</ability>
+        <ability set="athletics" attr="STR" name="jump">Saltar</ability>
+        <ability set="athletics" attr="AGI" name="ride">Montar</ability>
+        <ability set="athletics" attr="AGI" name="swim">Nadar</ability>
+        <ability set="creative" attr="POW" name="art">Arte</ability>
+        <ability set="creative" attr="AGI" name="dance">Baile</ability>
+        <ability set="creative" attr="DEX" name="forge">Forja</ability>
+        <ability set="creative" attr="POW" name="music">Música</ability>
+        <ability set="creative" attr="DEX" name="sl_of_hand">T. de Manos</ability>
+        <ability set="intellectual" attr="INT" name="animals">Animales</ability>
+        <ability set="intellectual" attr="INT" name="appraisal">Tasación</ability>
+        <ability set="intellectual" attr="INT" name="memorize">Memorizar</ability>
+        <ability set="intellectual" attr="INT" name="herbal_lore">Herbolaria</ability>
+        <ability set="intellectual" attr="INT" name="history">Historia</ability>
+        <ability set="intellectual" attr="POW" name="m_appraisal">V. Mágica</ability>
+        <ability set="intellectual" attr="INT" name="medicine">Medicina</ability>
+        <ability set="intellectual" attr="INT" name="navigation">Navegación</ability>
+        <ability set="intellectual" attr="INT" name="occult">Ocultismo</ability>
+        <ability set="intellectual" attr="INT" name="sciences">Ciencia</ability>
+        <ability set="perception" attr="PER" name="notice">Advertir</ability>
+        <ability set="perception" attr="PER" name="search">Buscar</ability>
+        <ability set="perception" attr="PER" name="track">Rastrear</ability>
+        <ability set="socials" attr="WP" name="intimidate">Intimidar</ability>
+        <ability set="socials" attr="POW" name="leadership">Liderazgo</ability>
+        <ability set="socials" attr="INT" name="persuasion">Persuadir</ability>
+        <ability set="socials" attr="POW" name="style">Estilo</ability>
+    </language>
+</abilities>

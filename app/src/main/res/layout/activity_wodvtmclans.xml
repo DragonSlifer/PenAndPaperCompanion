@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_wodvtmclans"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.WorldOfDarkness.WODVTMCLANS">
+
+    <Button
+        android:text="@string/camarilla_clans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/camarillaClansButton"
+        android:layout_alignParentEnd="true"
+        android:onClick="gotoCamarilla" />
+
+    <Button
+        android:text="@string/sabbat_clans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/camarillaClansButton"
+        android:layout_alignParentStart="true"
+        android:id="@+id/sabbatClansButton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/independent_clans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sabbatClansButton"
+        android:layout_alignParentStart="true"
+        android:id="@+id/independentClansButton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/bloodlines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/independentClansButton"
+        android:layout_alignParentStart="true"
+        android:id="@+id/bloodlinesButton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/blood_variances"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bloodlinesButton"
+        android:layout_alignParentStart="true"
+        android:id="@+id/bloodVariancesButton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/go_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/goBackButton"
+        android:onClick="goBack" />
+</RelativeLayout>
