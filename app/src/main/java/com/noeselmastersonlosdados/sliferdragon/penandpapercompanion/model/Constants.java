@@ -4,12 +4,12 @@ package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model;
  * Created by Jorge on 26/11/2017.
  */
 
-public class STRING_CONSTS {
-    ///< Class STRING_CONSTS
+public class Constants {
+    ///< Class Constants
     public final static String ClassABFCharacter            = "class_abf_character";
     public final static String DatabaseConnectorClass       = "DatabaseConnectorClass";
     public final static String UserClass                    = "UserClass";
-    ///< Database Collection/Document STRING_CONSTS
+    ///< Database Collection/Document Constants
     public final static String CollectionUserData           = "UserData";
     public final static String CollectionABF                = "AnimaBeyondFantasy";
     public final static String CollectionABFCharacterSheets     = "CharacterSheets";
@@ -33,7 +33,21 @@ public class STRING_CONSTS {
     public final static String CollectionABFTables              = "Tables";
     public final static String CollectionABFUserEdits           = "UserEdits";
     public final static String CollectionABFUserEditsPersonal      = "?_edits";
-    ///< Extra Intent Parameter Identifiers STRING_CONSTS
+    ///< Activity result codes
+    //001
+    public final static int RESULT_OK = 1;
+    //001-050 (Internal Result Codes)
+    //051-099
+    //100-150
+    //151-199
+    //200-250 (External Result Codes)
+    public final static int RC_SIGN_IN = 200;   ///< Authentication Result Code
+    //251-299
+    //300-350
+    //351-399
+    //400-450 (Error Result Codes)
+    //451-499
+    ///< Extra Intent Parameter Identifiers Constants
     public final static String ForWritting                  = "ForWritting";
     public final static String ObjectType                   = "ObjectType";
     public final static String Collection                   = "Collection";
@@ -45,7 +59,6 @@ public class STRING_CONSTS {
     public final static String UserTAG                      = "USER";
     ///< User identifiers
     private static String UserIdentifier;
-    public static boolean UserLogged = false;
 
 
 

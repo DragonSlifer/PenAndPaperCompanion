@@ -89,13 +89,13 @@
     <string name="combat_technics_definition">Combat Techniques Definition</string>
     <string name="damage_calculator">Damage Calculator</string>
     <string name="initiative_calculator">Initiative Calculator</string>
-    <string name="location_refference_chart">Location Refference Chart</string>
+    <string name="location_refference_chart">Location Reference Chart</string>
     <string name="magic_in_combat">Magic In Combat</string>
-    <string name="ranged_combat_refference_charts">Ranged Combat Refference Charts</string>
+    <string name="ranged_combat_refference_charts">Ranged Combat Reference Charts</string>
     <string name="ranged_combat">Ranged Combat</string>
     <string name="special_situations_reference_chart">Special Situations Reference Chart</string>
     <string name="weapon_breakage_calculator">Weapon Breakage Calculator</string>
-    <string name="weapons_refference_chart">Weapons Refference Chart</string>
+    <string name="weapons_refference_chart">Weapons Reference Chart</string>
     <string name="attacker">Attacker</string>
     <string name="defender">Defender</string>
     <string name="block">Block</string>
@@ -552,6 +552,11 @@
     <string name="anima_beyond_fantasy">Anima Beyond Fantasy</string>
     <string name="username">User Name</string>
     <string name="password">Password</string>
-
+    <string name="successful_login">Successful Login!</string>
+    <string name="failed_login_wifi">Failed Login! Unable to connect to internet!</string>
+    <string name="failed_login_credentials">Failed Login! Username or password not correct!</string>
+    <string name="failed_login_unknown">Failed Login! Unknown error</string>
+    <string name="failed_login_cancelled">Cancelled Login!</string>
+    <string name="log_out">Log Out</string>
 
 </resources>

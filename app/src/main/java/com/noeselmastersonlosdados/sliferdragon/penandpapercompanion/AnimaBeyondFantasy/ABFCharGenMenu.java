@@ -7,16 +7,18 @@ import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFCharacter;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFToolsSaveData;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.R;
+import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.Constants;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.DatabaseConnector;
-import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.STRING_CONSTS;
 
 public class ABFCharGenMenu extends AppCompatActivity {
 
-    private ABFToolsSaveData abfToolsSaveData;
     private static Context c;
+    private ABFToolsSaveData abfToolsSaveData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,9 +121,10 @@ public class ABFCharGenMenu extends AppCompatActivity {
 
     public void saveInfo(View view){
         DatabaseConnector databaseConnector = new DatabaseConnector();
-        //STRING_CONSTS.setUserIdentifier(databaseConnector.getUser_id());
-        //abfToolsSaveData.getCharacter().setFirstTime(false);
-        //databaseConnector.setData(abfToolsSaveData.getCharacter(),STRING_CONSTS.getUserIdentifierCollection(STRING_CONSTS.CollectionABFCharacterSheets));
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        Constants.setUserIdentifier(user.getUid());
+        abfToolsSaveData.getCharacter().setFirstTime(false);
+        databaseConnector.setData(abfToolsSaveData.getCharacter(), Constants.getUserIdentifierCollection(Constants.CollectionABFCharacterSheets));
     }
 
     public void loadCharacter(View view){
