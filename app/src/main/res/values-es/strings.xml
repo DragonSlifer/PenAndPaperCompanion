@@ -551,4 +551,16 @@
     <string name="anima_beyond_fantasy">Anima Beyond Fantasy</string>
     <string name="username">Nombre de Usuariop</string>
     <string name="password">Contraseña</string>
+    <string name="successful_login">Login Correcto!</string>
+    <string name="failed_login_wifi">Fallo en el login: No se pudo conectar a internet</string>
+    <string name="failed_login_credentials">Login incorrecto: Usuario o contraseña incorrectos.</string>
+    <string name="failed_login_unknown">Fallo en el login: Error desconocido</string>
+    <string name="failed_login_cancelled">Login cancelado</string>
+    <string name="log_out">Cerrar Sesión</string>
+    <string name="char_empty_data">Hay datos del personaje que son necesarios y no tienen valor (como el nombre del personaje).</string>
+    <string name="mark_for_edit">Marcar para editar</string>
+    <string name="succsessful_save">Guardado correctamente!</string>
+    <string name="fail_save">Error de guardado!</string>
+    <string name="edit_char_text">Selecciona el personaje que quieres editar</string>
+    <string name="no_data">No hay datos de ese personaje para este juego</string>
 </resources>

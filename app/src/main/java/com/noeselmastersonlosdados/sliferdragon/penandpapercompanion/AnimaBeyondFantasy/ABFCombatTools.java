@@ -1,8 +1,8 @@
 package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFToolsSaveData;
@@ -15,12 +15,12 @@ public class ABFCombatTools extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abfcombat_tools);
-        //abfToolsSaveData = (ABFToolsSaveData) getIntent().getParcelableExtra("SaveDataClass");
+        //abfToolsSaveData = (ABFToolsSaveData) getIntent().getParcelableExtra("EISaveDataClass");
     }
 
     public void goto_MeleeCombat(View view) {
         Intent i = new Intent(this, ABFMeleeCombat.class);
-        //i.putExtra("SaveDataClass",(Parcelable) abfToolsSaveData);
+        //i.putExtra("EISaveDataClass",(Parcelable) abfToolsSaveData);
         startActivity(i);
     }
 }

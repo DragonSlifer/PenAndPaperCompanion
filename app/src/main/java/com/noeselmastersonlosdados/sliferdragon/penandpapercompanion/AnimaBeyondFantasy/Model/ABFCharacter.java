@@ -26,6 +26,7 @@ public class ABFCharacter implements Parcelable, Serializable {
     private String nationality;
     private String ethnicity;
     private String social_Status;
+    private int social_Status_int;
     private int level;
     private int DP_total;
     private int DP_used;
@@ -43,7 +44,8 @@ public class ABFCharacter implements Parcelable, Serializable {
     private WeaponCharts weaponCharts;
     private Resistances resistances;
     private MartialArts martialArtsCharts; ///< It has Ki, Martial Knowledge and Martial Arts
-    private String user_name;
+    private boolean editMode;
+
     /**
      * Private Classes.
      * Not every character would have some of it, so they have
@@ -56,7 +58,7 @@ public class ABFCharacter implements Parcelable, Serializable {
     /**
      * Some other things
      */
-    private static final String version = "v.0.9";
+    private static final String version = "v.0.9";  ///< This is only for debug
 
 
     /**
@@ -79,6 +81,7 @@ public class ABFCharacter implements Parcelable, Serializable {
         combatAbilities = new CombatAbilities();
         Log.d("INFO","Loading Secondary Abilities for the first time");
         secondAbilities = new SecondAbilities();
+        editMode = true;
     }
 
     protected ABFCharacter(Parcel in) {
@@ -90,6 +93,7 @@ public class ABFCharacter implements Parcelable, Serializable {
         nationality = in.readString();
         ethnicity = in.readString();
         social_Status = in.readString();
+        social_Status_int = in.readInt();
         level = in.readInt();
         DP_total = in.readInt();
         DP_used = in.readInt();
@@ -107,10 +111,11 @@ public class ABFCharacter implements Parcelable, Serializable {
         weaponCharts = in.readParcelable(WeaponCharts.class.getClassLoader());
         resistances = in.readParcelable(Resistances.class.getClassLoader());
         martialArtsCharts = in.readParcelable(MartialArts.class.getClassLoader());
+        editMode = in.readByte() != 0;
         psiPowers = in.readByte() != 0;
         psiPowersCharts = in.readParcelable(PsiPowersCharts.class.getClassLoader());
         magic = in.readByte() != 0;
-        ABFMagic = in.readParcelable(ABFMagic.class.getClassLoader());
+        ABFMagic = in.readParcelable(com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFMagic.class.getClassLoader());
     }
 
     @Override
@@ -123,6 +128,7 @@ public class ABFCharacter implements Parcelable, Serializable {
         dest.writeString(nationality);
         dest.writeString(ethnicity);
         dest.writeString(social_Status);
+        dest.writeInt(social_Status_int);
         dest.writeInt(level);
         dest.writeInt(DP_total);
         dest.writeInt(DP_used);
@@ -140,6 +146,7 @@ public class ABFCharacter implements Parcelable, Serializable {
         dest.writeParcelable(weaponCharts, flags);
         dest.writeParcelable(resistances, flags);
         dest.writeParcelable(martialArtsCharts, flags);
+        dest.writeByte((byte) (editMode ? 1 : 0));
         dest.writeByte((byte) (psiPowers ? 1 : 0));
         dest.writeParcelable(psiPowersCharts, flags);
         dest.writeByte((byte) (magic ? 1 : 0));
@@ -399,6 +406,13 @@ public class ABFCharacter implements Parcelable, Serializable {
         this.resistances = resistances;
     }
 
+    public int getSocial_Status_int() {
+        return social_Status_int;
+    }
+
+    public void setSocial_Status_int(int social_Status_int) {
+        this.social_Status_int = social_Status_int;
+    }
 
     private void processWeaponChartStrings(ArrayList<String> auxiliarArrayListStrings) {
         WeaponChart aux;
@@ -588,6 +602,14 @@ public class ABFCharacter implements Parcelable, Serializable {
                 attribute += attributes.charAt(i);
             }
         }
+    }
+
+    public boolean isEditMode() {
+        return editMode;
+    }
+
+    public void setEditMode(boolean editMode) {
+        this.editMode = editMode;
     }
 
     @NonNull

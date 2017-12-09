@@ -1,7 +1,7 @@
 package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,7 +29,7 @@ public class ABF_CharGen_CombatAbilities extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abf__char_gen__combat_abilities);
-        this.abfToolsSaveData = getIntent().getParcelableExtra("SaveDataClass");
+        this.abfToolsSaveData = getIntent().getParcelableExtra("EISaveDataClass");
 
         attack_base  = (TextView) findViewById(R.id.atBase);
         block_base   = (TextView) findViewById(R.id.blBase);

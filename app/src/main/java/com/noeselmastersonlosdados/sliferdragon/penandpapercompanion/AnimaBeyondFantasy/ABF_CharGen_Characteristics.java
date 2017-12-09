@@ -36,7 +36,7 @@ public class ABF_CharGen_Characteristics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abf__char_gen__characteristics);
 
-        abfToolsSaveData = getIntent().getParcelableExtra("SaveDataClass");
+        abfToolsSaveData = getIntent().getParcelableExtra("EISaveDataClass");
         cout(abfToolsSaveData.getCharacter().getMainCharacteristics().toString());
         this.AGI = findViewById(R.id.agi_val);
         this.CON = findViewById(R.id.con_val);

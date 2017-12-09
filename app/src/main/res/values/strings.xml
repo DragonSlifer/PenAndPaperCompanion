@@ -558,5 +558,12 @@
     <string name="failed_login_unknown">Failed Login! Unknown error</string>
     <string name="failed_login_cancelled">Cancelled Login!</string>
     <string name="log_out">Log Out</string>
-
+    <string name="char_empty_data">There\'s needed data from the character (as the name, for example), so it cannot be saved.</string>
+    <string name="load_abf_char_diag">Load Anima Beyond Fantasy Character</string>
+    <string name="mark_for_edit">Mark for edit</string>
+    <string name="succsessful_save">Successfully saved!</string>
+    <string name="fail_save">Failed saved!</string>
+    <string name="edit_char_text">Select the character you want to edit</string>
+    <string name="no_data">There\'s no character data from this game</string>
+    <string name="char_level">Level</string>
 </resources>

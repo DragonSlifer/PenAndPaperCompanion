@@ -1,8 +1,8 @@
 package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFToolsSaveData;
@@ -25,7 +25,7 @@ public class ABFTools extends AppCompatActivity {
 
     public void goto_CombatMenu(View view) {
         Intent i = new Intent(this, ABFCombatTools.class);
-        //i.putExtra("SaveDataClass", (Parcelable) abfToolsSaveData);
+        //i.putExtra("EISaveDataClass", (Parcelable) abfToolsSaveData);
         startActivity(i);
     }
 

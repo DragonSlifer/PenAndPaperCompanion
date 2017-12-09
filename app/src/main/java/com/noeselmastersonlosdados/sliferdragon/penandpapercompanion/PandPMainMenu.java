@@ -37,7 +37,7 @@ public class PandPMainMenu extends AppCompatActivity {
                             .setAvailableProviders(
                                     Arrays.asList(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
                                             new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
-                            .build(), Constants.RC_SIGN_IN);
+                            .build(), Constants.RESULT_RC_SIGN_IN);
         }
     }
 
@@ -63,7 +63,7 @@ public class PandPMainMenu extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
-            case Constants.RC_SIGN_IN:
+            case Constants.RESULT_RC_SIGN_IN:
                 IdpResponse response = IdpResponse.fromResultIntent(data);
                 if (resultCode == Constants.RESULT_OK) {
                     GeneralMethods.ShowSnackbar(R.string.successful_login, (View) getResources().getLayout(R.layout.activity_pand_pmain_menu));

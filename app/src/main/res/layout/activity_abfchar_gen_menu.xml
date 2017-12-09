@@ -4,207 +4,174 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABFCharGenMenu">
+    android:minHeight="250dp"
+    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABFCharGenMenu"
+    tools:layout_editor_absoluteY="25dp">
 
     <ScrollView
+        style="@android:style/Widget.ScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintTop_creator="1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <GridLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_constraintBottom_creator="1"
-            tools:layout_constraintLeft_creator="1"
-            tools:layout_constraintRight_creator="1"
-            tools:layout_constraintTop_creator="1">
+            android:layout_gravity="center_horizontal"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowOrderPreserved="false">
 
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="84dp"
+                android:layout_height="100dp"
+                android:layout_columnSpan="2"
                 android:contentDescription="@string/herramientas_de_anima_beyond_fantasy"
                 app:srcCompat="@drawable/logo_anima"
                 tools:layout_editor_absoluteX="8dp"
                 tools:layout_editor_absoluteY="0dp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/basicInfoButton"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_gravity="fill"
+                android:onClick="goto_BasicInfo"
+                android:text="@string/basic_information"
+                tools:ignore="ButtonStyle" />
 
-                <Button
-                    android:id="@+id/basicInfoButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="goto_BasicInfo"
-                    android:text="@string/basic_information"
-                    tools:ignore="ButtonStyle" />
+            <Button
+                android:id="@+id/classAndRaceButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_ClassAndRace"
+                android:text="@string/class_and_race"
+                tools:ignore="ButtonStyle" />
 
-                <Button
-                    android:id="@+id/classAndRaceButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:onClick="goto_ClassAndRace"
-                    android:text="@string/class_and_race"
-                    tools:ignore="ButtonStyle" />
-            </LinearLayout>
+            <Button
+                android:id="@+id/comAbButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_CombatAbilities"
+                android:text="@string/combat_abilities"
+                tools:ignore="ButtonStyle" />
 
-            <TableLayout
+            <Button
+                android:id="@+id/magAbButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_MagicAbilities"
+                android:text="@string/magic_habilities"
+                tools:ignore="ButtonStyle" />
+
+            <Button
+                android:id="@+id/psiAbButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_PsyquicAbilities"
+                android:text="@string/psyquic_abilities"
+                tools:ignore="ButtonStyle" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <Button
+                android:id="@+id/kiAbButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_KiAbilities"
+                android:text="@string/ki_abilities"
+                tools:ignore="ButtonStyle" />
 
-                    <Button
-                        android:id="@+id/comAbButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:onClick="goto_CombatAbilities"
-                        android:text="@string/combat_abilities"
-                        tools:ignore="ButtonStyle" />
+            <Button
+                android:id="@+id/incAbButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_Incarnations"
+                android:text="@string/incarnations"
+                tools:ignore="ButtonStyle" />
 
-                    <Button
-                        android:id="@+id/magAbButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:onClick="goto_MagicAbilities"
-                        android:text="@string/magic_habilities"
-                        tools:ignore="ButtonStyle" />
+            <Button
+                android:id="@+id/grimoiresButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_Grimoires"
+                android:text="@string/grimoires"
+                tools:ignore="ButtonStyle" />
 
-                </TableRow>
+            <Button
+                android:id="@+id/psiPatButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_PsiPatrons"
+                android:text="@string/psi_patrons"
+                tools:ignore="ButtonStyle" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <Button
+                android:id="@+id/invenButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_Inventory"
+                android:text="@string/inventory"
+                tools:ignore="ButtonStyle" />
 
-                    <Button
-                        android:id="@+id/psiAbButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:onClick="goto_PsyquicAbilities"
-                        android:text="@string/psyquic_abilities"
-                        tools:ignore="ButtonStyle" />
+            <Button
+                android:id="@+id/weapButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_Weapons"
+                android:text="@string/weapons"
+                tools:ignore="ButtonStyle" />
 
-                    <Button
-                        android:id="@+id/kiAbButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:onClick="goto_KiAbilities"
-                        android:text="@string/ki_abilities"
-                        tools:ignore="ButtonStyle" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <Button
-                        android:id="@+id/marAbButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:onClick="goto_MartialArts"
-                        android:text="@string/martial_arts"
-                        tools:ignore="ButtonStyle" />
-
-                    <Button
-                        android:id="@+id/incAbButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:onClick="goto_Incarnations"
-                        android:text="@string/incarnations"
-                        tools:ignore="ButtonStyle" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <Button
-                        android:id="@+id/grimoiresButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:onClick="goto_Grimoires"
-                        android:text="@string/grimoires"
-                        tools:ignore="ButtonStyle" />
-
-                    <Button
-                        android:id="@+id/psiPatButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:onClick="goto_PsiPatrons"
-                        android:text="@string/psi_patrons"
-                        tools:ignore="ButtonStyle" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <Button
-                        android:id="@+id/weapButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:onClick="goto_Weapons"
-                        android:text="@string/weapons"
-                        tools:ignore="ButtonStyle" />
-
-                    <Button
-                        android:id="@+id/invenButton"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:onClick="goto_Inventory"
-                        android:text="@string/inventory"
-                        tools:ignore="ButtonStyle" />
-                </TableRow>
-            </TableLayout>
+            <Button
+                android:id="@+id/marAbButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_horizontal|fill"
+                android:onClick="goto_MartialArts"
+                android:text="@string/martial_arts"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:id="@+id/charInfo"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill_horizontal"
+                android:foregroundGravity="fill"
                 android:onClick="goto_CharBackInfo"
                 android:text="@string/character_background_info" />
 
             <Button
                 android:id="@+id/saveCharacter"
-                android:layout_width="match_parent"
+                android:layout_width="363dp"
                 android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill_horizontal"
+                android:elevation="0dp"
+                android:foregroundGravity="fill"
                 android:onClick="saveInfo"
                 android:text="@string/save_character_info" />
 
@@ -212,9 +179,22 @@
                 android:id="@+id/loadCharacter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill_horizontal"
+                android:foregroundGravity="fill"
+                android:onClick="loadCharacter"
                 android:text="@string/load" />
 
-        </LinearLayout>
+            <Button
+                android:id="@+id/markForEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill_horizontal"
+                android:foregroundGravity="fill"
+                android:text="@string/mark_for_edit" />
+
+        </GridLayout>
     </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
