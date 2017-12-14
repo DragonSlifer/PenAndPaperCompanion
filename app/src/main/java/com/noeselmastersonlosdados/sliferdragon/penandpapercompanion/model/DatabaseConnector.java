@@ -209,6 +209,7 @@ public class DatabaseConnector {
         return characterNames;
     }
 
+
     public void saveCharacterData(String gameCollection, String userIdentifierCollection, Object data) {
         db.collection(gameCollection).document(Constants.CollectionCharacterSheets)
                 .collection(userIdentifierCollection)
@@ -251,5 +252,9 @@ public class DatabaseConnector {
                     }
                 });
         return character[0];
+    }
+
+    public static FirebaseFirestore getDb() {
+        return db;
     }
 }

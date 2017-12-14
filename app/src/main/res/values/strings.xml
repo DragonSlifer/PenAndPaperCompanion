@@ -646,4 +646,11 @@
     <string name="primary_bonuses">Primary Bonuses</string>
     <string name="secondary_bonuses">Secondary Bonuses</string>
     <string name="special_bonuses">Special Bonuses</string>
+    <string-array name="abf_archetypes">
+        <item>Fighter</item>
+        <item>Mystic</item>
+        <item>Psychic</item>
+        <item>Prowler</item>
+        <item>Domine</item>
+    </string-array>
 </resources>
