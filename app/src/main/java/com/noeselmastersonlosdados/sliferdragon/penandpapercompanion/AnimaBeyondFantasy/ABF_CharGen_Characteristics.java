@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFToolsSaveData;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.MainCharacteristics;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.R;
+import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.Constants;
 
 public class ABF_CharGen_Characteristics extends AppCompatActivity {
 
@@ -36,8 +37,12 @@ public class ABF_CharGen_Characteristics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abf__char_gen__characteristics);
 
-        abfToolsSaveData = getIntent().getParcelableExtra("EISaveDataClass");
-        cout(abfToolsSaveData.getCharacter().getMainCharacteristics().toString());
+        if (savedInstanceState != null) {
+            abfToolsSaveData = savedInstanceState.getParcelable(Constants.EISaveDataClass);
+        } else {
+            abfToolsSaveData = getIntent().getParcelableExtra("EISaveDataClass");
+        }
+
         this.AGI = findViewById(R.id.agi_val);
         this.CON = findViewById(R.id.con_val);
         this.DEX = findViewById(R.id.dex_val);
@@ -200,14 +205,33 @@ public class ABF_CharGen_Characteristics extends AppCompatActivity {
     public void saveData(View view){
         MainCharacteristics mc = this.abfToolsSaveData.getCharacter().getMainCharacteristics();
 
-        mc.setAGI(Integer.parseInt(this.AGI.getText().toString()));
-        mc.setCON(Integer.parseInt(this.CON.getText().toString()));
-        mc.setFUE(Integer.parseInt(this.STR.getText().toString()));
-        mc.setDES(Integer.parseInt(this.DEX.getText().toString()));
-        mc.setINT(Integer.parseInt(this.INT.getText().toString()));
-        mc.setVOL(Integer.parseInt(this.WP.getText().toString()));
-        mc.setPOD(Integer.parseInt(this.POW.getText().toString()));
-        mc.setPER(Integer.parseInt(this.PER.getText().toString()));
+        if (!abfToolsSaveData.getCharacter().isFirstTime()) {
+            if (Integer.parseInt(this.AGI.getText().toString()) > abfToolsSaveData.getCharacter().getMainCharacteristics().getAGI())
+                mc.setAGI(Integer.parseInt(this.AGI.getText().toString()));
+            if (Integer.parseInt(this.CON.getText().toString()) > abfToolsSaveData.getCharacter().getMainCharacteristics().getCON())
+                mc.setCON(Integer.parseInt(this.CON.getText().toString()));
+            if (Integer.parseInt(this.STR.getText().toString()) > abfToolsSaveData.getCharacter().getMainCharacteristics().getFUE())
+                mc.setFUE(Integer.parseInt(this.STR.getText().toString()));
+            if (Integer.parseInt(this.DEX.getText().toString()) > abfToolsSaveData.getCharacter().getMainCharacteristics().getDES())
+                mc.setDES(Integer.parseInt(this.DEX.getText().toString()));
+            if (Integer.parseInt(this.INT.getText().toString()) > abfToolsSaveData.getCharacter().getMainCharacteristics().getINT())
+                mc.setINT(Integer.parseInt(this.INT.getText().toString()));
+            if (Integer.parseInt(this.WP.getText().toString()) > abfToolsSaveData.getCharacter().getMainCharacteristics().getVOL())
+                mc.setVOL(Integer.parseInt(this.WP.getText().toString()));
+            if (Integer.parseInt(this.POW.getText().toString()) > abfToolsSaveData.getCharacter().getMainCharacteristics().getPOD())
+                mc.setPOD(Integer.parseInt(this.POW.getText().toString()));
+            if (Integer.parseInt(this.PER.getText().toString()) > abfToolsSaveData.getCharacter().getMainCharacteristics().getPER())
+                mc.setPER(Integer.parseInt(this.PER.getText().toString()));
+        } else {
+            mc.setAGI(Integer.parseInt(this.AGI.getText().toString()));
+            mc.setCON(Integer.parseInt(this.CON.getText().toString()));
+            mc.setFUE(Integer.parseInt(this.STR.getText().toString()));
+            mc.setDES(Integer.parseInt(this.DEX.getText().toString()));
+            mc.setINT(Integer.parseInt(this.INT.getText().toString()));
+            mc.setVOL(Integer.parseInt(this.WP.getText().toString()));
+            mc.setPOD(Integer.parseInt(this.POW.getText().toString()));
+            mc.setPER(Integer.parseInt(this.PER.getText().toString()));
+        }
 
         onBackPressed();
     }
@@ -221,5 +245,11 @@ public class ABF_CharGen_Characteristics extends AppCompatActivity {
 
     public void cout(String s){
         Log.d("INFO",s);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putParcelable(Constants.EISaveDataClass, abfToolsSaveData);
+        super.onSaveInstanceState(savedInstanceState);
     }
 }

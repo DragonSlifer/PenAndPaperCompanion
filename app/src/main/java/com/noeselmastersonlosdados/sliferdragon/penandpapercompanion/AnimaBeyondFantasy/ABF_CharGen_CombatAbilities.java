@@ -2,6 +2,7 @@ package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyon
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFToolsSaveData;
+import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.comAb;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.R;
 
 import java.util.ArrayList;
@@ -62,7 +64,41 @@ public class ABF_CharGen_CombatAbilities extends AppCompatActivity {
     }
 
     private void loadBasicData() {
+        if (!abfToolsSaveData.getCharacter().isFirstTime()) {
+            comAb ATK = abfToolsSaveData.getCharacter().getCombatAbilities().getATK();
+            comAb BLK = abfToolsSaveData.getCharacter().getCombatAbilities().getBLK();
+            comAb DDG = abfToolsSaveData.getCharacter().getCombatAbilities().getDDG();
+            comAb ARM = abfToolsSaveData.getCharacter().getCombatAbilities().getARM();
 
+            int baseATK = ATK.getBase();
+            int baseBLK = BLK.getBase();
+            int baseDDG = DDG.getBase();
+            int baseARM = ARM.getBase();
+
+            int totalATK = ATK.getTotal();
+            int totalBLK = BLK.getTotal();
+            int totalDDG = DDG.getTotal();
+            int totalARM = ARM.getTotal();
+
+            attack_base.setText(baseATK);
+            block_base.setText(baseBLK);
+            dodge_base.setText(baseDDG);
+            armour_base.setText(baseARM);
+
+            attack_total.setText(totalATK);
+            block_total.setText(totalBLK);
+            dodge_total.setText(totalDDG);
+            armour_total.setText(totalARM);
+        } else {
+            attack_base.setText(0);
+            block_base.setText(0);
+            dodge_base.setText(0);
+            armour_base.setText(0);
+            attack_total.setText(0);
+            block_total.setText(0);
+            dodge_total.setText(0);
+            armour_total.setText(0);
+        }
     }
 
     private void initializeToZero() {
@@ -72,7 +108,7 @@ public class ABF_CharGen_CombatAbilities extends AppCompatActivity {
         armour_base.setText("0");
     }
 
-    public void onClic(View view){
+    public void onClickButton(View view) {
         int i = Integer.parseInt(multiple.getText().toString());
         if (i <= 0 || ((RadioButton)findViewById(R.id.oneByOneRadio)).isChecked())
             i = 1;
@@ -81,6 +117,7 @@ public class ABF_CharGen_CombatAbilities extends AppCompatActivity {
         int miT  = 0;
         int miB  = 0;
         int cost = 0;
+        Log.i("INFO", "Button pushed");
         switch (view.getId()){
             case R.id.addAT:
                 base  = attack_base;

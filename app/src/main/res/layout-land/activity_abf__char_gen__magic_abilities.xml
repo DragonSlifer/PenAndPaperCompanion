@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_columnSpan="2"
     android:layout_row="6"
-    android:background="@drawable/anima_magic_background"
+    android:background="@drawable/anima_magic_background_landscape"
     tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABF_CharGen_MagicAbilities"
     tools:layout_editor_absoluteY="25dp">
 
@@ -14,7 +13,6 @@
         android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,7 +26,7 @@
             android:rowOrderPreserved="false">
 
             <TextView
-                android:id="@+id/textView96"
+                android:id="@+id/textView53"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="4"
@@ -40,7 +38,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView97"
+                android:id="@+id/textView55"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="3"
@@ -52,7 +50,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView49"
+                android:id="@+id/textView56"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="2"
@@ -66,7 +64,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView52"
+                android:id="@+id/textView58"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -90,7 +88,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/textView50"
+                android:id="@+id/textView61"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -102,7 +100,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView59"
+                android:id="@+id/textView62"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -114,14 +112,14 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button25"
+                android:id="@+id/button31"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:text="+" />
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/editText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/white"
@@ -130,13 +128,13 @@
                 android:textColor="@android:color/white" />
 
             <Button
-                android:id="@+id/button28"
+                android:id="@+id/button34"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="-" />
 
             <TextView
-                android:id="@+id/textView60"
+                android:id="@+id/textView63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -148,7 +146,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView81"
+                android:id="@+id/textView64"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="2"
@@ -162,7 +160,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView83"
+                android:id="@+id/textView66"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -186,7 +184,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/textView87"
+                android:id="@+id/textView67"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -198,7 +196,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView89"
+                android:id="@+id/textView68"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -210,14 +208,14 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button35"
+                android:id="@+id/button39"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:text="+" />
 
             <EditText
-                android:id="@+id/editText12"
+                android:id="@+id/editText2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/white"
@@ -226,13 +224,13 @@
                 android:textColor="@android:color/white" />
 
             <Button
-                android:id="@+id/button36"
+                android:id="@+id/button40"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="-" />
 
             <TextView
-                android:id="@+id/textView90"
+                android:id="@+id/textView69"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -244,7 +242,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView98"
+                android:id="@+id/textView70"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="2"
@@ -258,7 +256,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView99"
+                android:id="@+id/textView71"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -282,7 +280,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/textView100"
+                android:id="@+id/textView72"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -294,7 +292,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView101"
+                android:id="@+id/textView73"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -306,14 +304,14 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button37"
+                android:id="@+id/button41"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:text="+" />
 
             <EditText
-                android:id="@+id/editText13"
+                android:id="@+id/editText3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@android:color/white"
@@ -322,13 +320,13 @@
                 android:textColor="@android:color/white" />
 
             <Button
-                android:id="@+id/button38"
+                android:id="@+id/button42"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:text="-" />
 
             <TextView
-                android:id="@+id/textView102"
+                android:id="@+id/textView74"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="fill"
@@ -340,7 +338,7 @@
                 android:textStyle="bold" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/checkBox3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="5"
@@ -350,7 +348,7 @@
                 android:textColor="@android:color/white" />
 
             <CheckBox
-                android:id="@+id/checkBox2"
+                android:id="@+id/checkBox4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="5"
@@ -360,7 +358,7 @@
                 android:textColor="@android:color/white" />
 
             <Button
-                android:id="@+id/button29"
+                android:id="@+id/button43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="7"
@@ -368,7 +366,7 @@
                 android:text="Arcana Sephira" />
 
             <Button
-                android:id="@+id/button30"
+                android:id="@+id/button44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="7"
@@ -376,7 +374,7 @@
                 android:text="Convocation" />
 
             <Button
-                android:id="@+id/button27"
+                android:id="@+id/button45"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="7"
@@ -384,7 +382,7 @@
                 android:text="Magic Paths" />
 
             <Button
-                android:id="@+id/button32"
+                android:id="@+id/button46"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="7"
@@ -392,13 +390,12 @@
                 android:text="Magic Projection" />
 
             <Button
-                android:id="@+id/button33"
+                android:id="@+id/button47"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_columnSpan="7"
                 android:layout_gravity="fill"
                 android:text="Magic Theorems" />
-
         </GridLayout>
     </ScrollView>
 

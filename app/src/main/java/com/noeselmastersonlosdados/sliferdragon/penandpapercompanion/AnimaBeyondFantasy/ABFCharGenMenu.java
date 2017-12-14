@@ -25,7 +25,32 @@ public class ABFCharGenMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abfchar_gen_menu);
-        abfToolsSaveData = new ABFToolsSaveData();
+
+        if (savedInstanceState != null) {
+            abfToolsSaveData = savedInstanceState.getParcelable(Constants.EISaveDataClass);
+        } else {
+            abfToolsSaveData = new ABFToolsSaveData();
+        }
+
+        if (abfToolsSaveData.getCharacter().getCategory() == "") {
+            findViewById(R.id.comAbButton).setEnabled(false);
+            findViewById(R.id.magAbButton).setEnabled(false);
+            findViewById(R.id.psiAbButton).setEnabled(false);
+            findViewById(R.id.kiAbButton).setEnabled(false);
+            findViewById(R.id.incAbButton).setEnabled(false);
+            findViewById(R.id.grimoiresButton).setEnabled(false);
+            findViewById(R.id.psiPatButton).setEnabled(false);
+            findViewById(R.id.marAbButton).setEnabled(false);
+        } else {
+            findViewById(R.id.comAbButton).setEnabled(true);
+            findViewById(R.id.magAbButton).setEnabled(true);
+            findViewById(R.id.psiAbButton).setEnabled(true);
+            findViewById(R.id.kiAbButton).setEnabled(true);
+            findViewById(R.id.incAbButton).setEnabled(true);
+            findViewById(R.id.grimoiresButton).setEnabled(true);
+            findViewById(R.id.psiPatButton).setEnabled(true);
+            findViewById(R.id.marAbButton).setEnabled(true);
+        }
     }
 
     public void goto_BasicInfo(View view) {
@@ -131,7 +156,7 @@ public class ABFCharGenMenu extends AppCompatActivity {
     }
 
     public void saveInfo(View view) {
-        if (abfToolsSaveData.getCharacter().getName() != "" || abfToolsSaveData.getCharacter().getName() != null) {
+        if (abfToolsSaveData.getCharacter().getName() != "" && abfToolsSaveData.getCharacter().getName() != null) {
             DatabaseConnector databaseConnector = new DatabaseConnector();
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             Constants.setUserIdentifier(user.getUid());
@@ -155,6 +180,12 @@ public class ABFCharGenMenu extends AppCompatActivity {
         i.putExtra(Constants.EIUserCollection, Constants.getUserIdentifierCollection(Constants.CollectionCharacterSheets));
         i.putExtra(Constants.EIObjectType, Constants.ClassABFCharacter);
         startActivityForResult(i, Constants.REQUEST_LOADCHAR);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putParcelable(Constants.EISaveDataClass, abfToolsSaveData);
+        super.onSaveInstanceState(savedInstanceState);
     }
 
 }

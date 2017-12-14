@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPicker;
+import com.michaelmuenzer.android.scrollablennumberpicker.ScrollableNumberPickerListener;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFCharacter;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFToolsSaveData;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.MainCharacteristics;
@@ -32,7 +34,12 @@ public class ABF_CharGen_BasicInfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abf_char_gen__basic_info);
 
-        abfToolsSaveData = getIntent().getParcelableExtra("EISaveDataClass");
+        if (savedInstanceState != null) {
+            abfToolsSaveData = savedInstanceState.getParcelable(Constants.EISaveDataClass);
+        } else {
+            abfToolsSaveData = getIntent().getParcelableExtra("EISaveDataClass");
+        }
+
         Spinner ethnicity = findViewById(R.id.ethnicitySpinner);
         Spinner nation_of_origin = findViewById(R.id.nationSpinner);
         Spinner gender = findViewById(R.id.genderSpinner);
@@ -84,7 +91,7 @@ public class ABF_CharGen_BasicInfo extends AppCompatActivity {
         gender.setAdapter(gen);
 
         Log.i("DEBUG_TAG", "Loading Character Basic Info");
-
+        final ScrollableNumberPicker level_picker = findViewById(R.id.level_picker);
         if(!abfToolsSaveData.getCharacter().isFirstTime()){
             Log.i("DEBUG_TAG", "Loading Character Basic Info");
             nation_of_origin.setSelection(getPositionOfString(abfToolsSaveData.getCharacter().getNationality(),getResources().getStringArray(R.array.nationality_array)));
@@ -95,6 +102,7 @@ public class ABF_CharGen_BasicInfo extends AppCompatActivity {
                 gender.setSelection(0);
             ((EditText) findViewById(R.id.charNameText)).setText(abfToolsSaveData.getCharacter().getName());
             ((EditText) findViewById(R.id.ageText)).setText(Integer.toString(abfToolsSaveData.getCharacter().getAge()));
+            level_picker.setValue(abfToolsSaveData.getCharacter().getLevel());
         }
         if (!abfToolsSaveData.getCharacter().isEditMode()) {
             Log.i("DEBUG_TAG", "Loading Character Basic Info");
@@ -109,6 +117,15 @@ public class ABF_CharGen_BasicInfo extends AppCompatActivity {
             gender.setEnabled(true);
             findViewById(R.id.charNameText).setEnabled(true);
         }
+
+
+        level_picker.setListener(new ScrollableNumberPickerListener() {
+            @Override
+            public void onNumberPicked(int value) {
+                if (!abfToolsSaveData.getCharacter().isFirstTime() && value < abfToolsSaveData.getCharacter().getLevel())
+                    level_picker.setValue(abfToolsSaveData.getCharacter().getLevel());  ///< We can't change a character level below it's original level
+            }
+        });
     }
 
     private int getPositionOfString(String string, String[] array) {
@@ -332,6 +349,7 @@ public class ABF_CharGen_BasicInfo extends AppCompatActivity {
         Spinner nation_spinner = findViewById(R.id.nationSpinner);
         Spinner socsta_spinner = findViewById(R.id.socstatSpinner);
         Spinner ethnic_spinner = findViewById(R.id.ethnicitySpinner);
+        ScrollableNumberPicker level_picker = findViewById(R.id.level_picker);
 
         String name;
         name = name_edittext.getText().toString();
@@ -350,6 +368,8 @@ public class ABF_CharGen_BasicInfo extends AppCompatActivity {
         ABFCharacter aux = this.abfToolsSaveData.getCharacter();
 
         aux.setName(name);
+        if (!aux.isFirstTime() && level_picker.getValue() >= aux.getLevel())
+            aux.setLevel(level_picker.getValue());
         aux.setAge(age);
         aux.setGender(gender);
         aux.setNationality(nation);
@@ -358,6 +378,7 @@ public class ABF_CharGen_BasicInfo extends AppCompatActivity {
         aux.setFirstTime(false);
         aux.setEditMode(true);
         aux.setSocial_Status_int(socsta_spinner.getSelectedItemPosition());
+
 
         abfToolsSaveData.setCharacter(aux);
         onBackPressed();
@@ -370,6 +391,12 @@ public class ABF_CharGen_BasicInfo extends AppCompatActivity {
         data.putExtra("ActionResult","SendInfo");
         setResult(Constants.RESULT_OK, data);
         finish();
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        savedInstanceState.putParcelable(Constants.EISaveDataClass, abfToolsSaveData);
+        super.onSaveInstanceState(savedInstanceState);
     }
 }
 

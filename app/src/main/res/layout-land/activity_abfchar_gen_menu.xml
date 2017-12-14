@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/anima_char_gen_menu"
+    android:background="@drawable/anima_char_gen_landscape"
     android:minHeight="250dp"
     tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABFCharGenMenu"
     tools:layout_editor_absoluteY="25dp">
@@ -13,7 +13,6 @@
         style="@android:style/Widget.ScrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="16dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -35,7 +34,7 @@
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_columnSpan="2"
                 android:contentDescription="@string/herramientas_de_anima_beyond_fantasy"

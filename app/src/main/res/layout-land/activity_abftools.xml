@@ -27,7 +27,7 @@
 
             <Button
                 android:id="@+id/CharGen"
-                style="@style/Base.Widget.AppCompat.Button"
+                style="@style/CustomButtonStyleBlackTrans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/transparent"
@@ -37,7 +37,7 @@
 
             <Button
                 android:id="@+id/gaiaButton"
-                style="@style/Base.Widget.AppCompat.Button"
+                style="@style/CustomButtonStyleBlackTrans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/transparent"
@@ -46,7 +46,7 @@
 
             <Button
                 android:id="@+id/BeastButton"
-                style="@style/Base.Widget.AppCompat.Button"
+                style="@style/CustomButtonStyleBlackTrans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/transparent"
@@ -55,7 +55,7 @@
 
             <Button
                 android:id="@+id/CombTools"
-                style="@style/Base.Widget.AppCompat.Button"
+                style="@style/CustomButtonStyleBlackTrans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/transparent"
@@ -65,7 +65,7 @@
 
             <Button
                 android:id="@+id/DiceRoller"
-                style="@style/Base.Widget.AppCompat.Button"
+                style="@style/CustomButtonStyleBlackTrans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/transparent"
@@ -76,7 +76,7 @@
 
             <Button
                 android:id="@+id/ClassAdd"
-                style="@style/Base.Widget.AppCompat.Button"
+                style="@style/CustomButtonStyleBlackTrans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/transparent"
@@ -85,7 +85,7 @@
 
             <Button
                 android:id="@+id/RaceAdd"
-                style="@style/Base.Widget.AppCompat.Button"
+                style="@style/CustomButtonStyleBlackTrans"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/transparent"

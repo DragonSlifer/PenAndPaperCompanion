@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABF_add_category">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="654dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2">
+
+            <TextView
+                android:id="@+id/textView75"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/catName"
+                android:text="@string/category_name"
+                android:textSize="18sp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/catName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/button48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:text="@string/category_translations"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView76"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/arquetype_Spinner"
+                android:text="@string/archetype"
+                android:textSize="18sp" />
+
+            <com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.MultiSelectionSpinner
+                android:id="@+id/archetypeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill" />
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/hpMultCost"
+                android:text="@string/hp_multiple_cost"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/hpMultCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView78"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/hpPerLevel"
+                android:text="@string/hp_per_level"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/hpPerLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView79"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/turnPerLevel"
+                android:text="@string/turn_per_level"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/turnPerLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/cmPerLevel"
+                android:text="@string/cm_per_level"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cmPerLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/cvPerIntervalLevel"
+                android:text="@string/cv_per_interval_level"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cvPerIntervalLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView84"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/cvInterval"
+                android:text="@string/cv_interval"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/cvInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:text="@string/primary_abilities"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView108"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:text="@string/combat_abilities"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView85"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/combatLimit"
+                android:text="@string/combat_limit"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/combatLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill" />
+
+            <TextView
+                android:id="@+id/textView86"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/atkCost"
+                android:text="@string/attack_ability_cost"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/atkCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView88"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/blkCost"
+                android:text="@string/block_ability_cost"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/blkCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView91"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/ddgCost"
+                android:text="@string/dodge_ability_cost"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ddgCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView93"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/armCost"
+                android:text="@string/wear_armor_cost"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/armCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView94"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/kiCost"
+                android:text="@string/ki_cost"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/kiCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView103"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/accumKiCost"
+                android:text="@string/ki_accumulation_cost"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/accumKiCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView109"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:text="@string/supernatural_abilities"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView95"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/supernaturalLimit"
+                android:text="@string/supernatural_limit"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/supernaturalLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill" />
+
+            <TextView
+                android:id="@+id/textView104"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/zeonCost"
+                android:text="@string/zeon_cost"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/zeonCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView105"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/zeonAdd"
+                android:text="@string/zeon_add"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/zeonAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView106"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/actCost"
+                android:text="@string/act_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/actCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView107"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/magProjCost"
+                android:text="@string/magic_projection_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/magProjCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView110"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/convCost"
+                android:text="@string/summoning_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/convCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView111"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/controlCost"
+                android:text="@string/control_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/controlCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/bindCost"
+                android:text="@string/bind_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/bindCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView113"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/banishCost"
+                android:text="@string/banish_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/banishCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView114"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:text="@string/psychic_abilities"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/textView116"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/supernaturalLimit"
+                android:text="@string/psychic_limit"
+                android:textSize="18sp" />
+
+            <Spinner
+                android:id="@+id/psychicLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill" />
+
+            <TextView
+                android:id="@+id/textView117"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/cvCost"
+                android:text="@string/cv_mult_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/cvCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView118"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/psyProjCost"
+                android:text="@string/psy_projection_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/psyProjCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView119"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:text="@string/secondary_abilities"
+                android:textAllCaps="false"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView125"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/atlCost"
+                android:text="@string/athletics_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/atlCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView124"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/socCost"
+                android:text="@string/social_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/socCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView123"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/perCost"
+                android:text="@string/perceptive_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/perCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView122"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/intCost"
+                android:text="@string/intellectual_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/intCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView121"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/vigCost"
+                android:text="@string/vigor_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/vigCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView120"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/subCost"
+                android:text="@string/subterfuge_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/subCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView126"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:gravity="center"
+                android:labelFor="@+id/creCost"
+                android:text="@string/creative_cost"
+                android:textSize="18sp"
+                tools:layout_editor_absoluteX="380dp"
+                tools:layout_editor_absoluteY="426dp" />
+
+            <EditText
+                android:id="@+id/creCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/reducedCosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:text="@string/reduced_costs" />
+
+            <Button
+                android:id="@+id/primaryBonuses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:text="@string/primary_bonuses" />
+
+            <Button
+                android:id="@+id/secondaruBonuses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:text="@string/secondary_bonuses" />
+
+            <Button
+                android:id="@+id/specialBonuses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="2"
+                android:layout_gravity="fill"
+                android:text="@string/special_bonuses" />
+
+        </GridLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

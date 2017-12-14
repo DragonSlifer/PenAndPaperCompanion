@@ -1,5 +1,30 @@
 <resources>
     <string name="app_name">RPG - Pen and Paper Companion</string>
+    <string name="activity_abf_main_menu">ABF Main Menu</string>
+    <string name="activity_wod_main_menu">World Of Darkness</string>
+    <string name="activity_wod_vtm_clans">VTM Clans</string>
+    <string name="activity_wod_vtm_clans_camarilla">Camarilla Clans</string>
+    <string name="activity_wod_vtm_clans_brujah">Clan Brujah</string>
+    <string name="activity_wod_vtm_brujah_his">History of the Brujah Clan</string>
+    <string name="activity_char_sheet">Character Sheet</string>
+    <string name="activity_wod_vtm_clans_gangrel">Clan Gangrel</string>
+    <string name="activity_wod_vtm_clans_nosferatu">Clan Nosferatu</string>
+    <string name="activity_wod_vtm_clans_malkavian">Clan Malkavian</string>
+    <string name="activity_wod_vtm_clans_ventrue">Clan Ventrue</string>
+    <string name="activity_wod_vtm_clans_toreador">Clan Toreador</string>
+    <string name="activity_wod_vtm_clans_tremere">Clan Tremere</string>
+    <string name="activity_wod_vtm_clans_sabbat">Sabbat Clans</string>
+    <string name="activity_abf_combat_tools">Combat Tools</string>
+    <string name="activity_abf_basic_info">Basic Information</string>
+    <string name="activity_abf_class_race">Class and Race</string>
+    <string name="activity_abf_combat_abilities">Combat Abilities</string>
+    <string name="activity_abf_magic_abilities">Magic Abilities</string>
+    <string name="activity_abf_main_characteristics">Main Characteristics</string>
+    <string name="activity_abf_ki_abilities">Ki Abilities</string>
+    <string name="activity_abf_psi_abilities">Psi Abilities</string>
+    <string name="activity_abf_secondary_abilities">Secondary Abilities</string>
+    <string name="activity_inventory">Inventory</string>
+    <string name="activity_load_character">Load Character Menu</string>
     <string name="title_activity_wodvtmclans" translatable="false">WODVTMCLANS</string>
     <string name="character_creation">Character Creation</string>
     <string name="clans">Clans</string>
@@ -209,7 +234,6 @@
         4. Compare and analiyze the result.\n
         (Don\'t forget the modifiers if necessary)</string>
     <string name="class_and_race">Class and Race</string>
-    <string name="combat_abilities">Combat Abilities</string>
     <string name="magic_habilities">Magic Abilities</string>
     <string name="psyquic_abilities">Psyquic Abilities</string>
     <string name="ki_abilities">Ki Abilities</string>
@@ -264,7 +288,9 @@
         <item>Warrior</item>
         <item>Acrobat Warrior</item>
         <item>Paladin</item>
+        <item>Paladin (Non-Supernatural)</item>
         <item>Dark Paladin</item>
+        <item>Dark Paladin (Non-Supernatural)</item>
         <item>Weapon Master</item>
         <item>Technician</item>
         <item>Tao</item>
@@ -565,5 +591,59 @@
     <string name="fail_save">Failed saved!</string>
     <string name="edit_char_text">Select the character you want to edit</string>
     <string name="no_data">There\'s no character data from this game</string>
-    <string name="char_level">Level</string>
+    <string name="char_level">Level:</string>
+    <string name="zeon">Zeon</string>
+    <string name="points">Points</string>
+    <string name="cat">CAT</string>
+    <string name="level">Level</string>
+    <string name="spe">Spe</string>
+    <string name="act">ACT</string>
+    <string name="magic_projection_as_attack">Magic Projection as Attack</string>
+    <string name="magic_projection_as_defense">Magic Projection as Defense</string>
+    <string name="regen">Regen</string>
+    <string name="category_name">Category Name:</string>
+    <string name="archetype">Archetype:</string>
+    <string name="category_translations">Category Translations</string>
+    <string name="hp_multiple_cost">HP Multiple Cost:</string>
+    <string name="hp_per_level">HP Per Level</string>
+    <string name="turn_per_level">Turn Per Level</string>
+    <string name="cm_per_level">CM Per Level</string>
+    <string name="cv_per_interval_level">CV Per Interval Level</string>
+    <string name="cv_interval">CV Interval</string>
+    <string name="combat_limit">Combat Limit</string>
+    <string name="primary_abilities">Primary Abilities</string>
+    <string name="attack_ability_cost">Attack Ability Cost</string>
+    <string name="block_ability_cost">Block Ability Cost</string>
+    <string name="dodge_ability_cost">Dodge Ability Cost</string>
+    <string name="wear_armor_cost">Wear Armor Cost</string>
+    <string name="ki_cost">Ki Cost</string>
+    <string name="supernatural_limit">Supernatural Limit</string>
+    <string name="ki_accumulation_cost">Ki Accumulation Cost</string>
+    <string name="zeon_cost">Zeon Cost</string>
+    <string name="zeon_add">Zeon Add</string>
+    <string name="act_cost">ACT Cost</string>
+    <string name="magic_projection_cost">Magic Projection Cost</string>
+    <string name="combat_abilities">Combat Abilities</string>
+    <string name="supernatural_abilities">Supernatural Abilities</string>
+    <string name="summoning_cost">Summoning Cost</string>
+    <string name="control_cost">Control Cost</string>
+    <string name="bind_cost">Bind Cost</string>
+    <string name="banish_cost">Banish Cost</string>
+    <string name="psychic_abilities">Psychic Abilities</string>
+    <string name="psychic_limit">Psychic Limit</string>
+    <string name="cv_mult_cost">CV Mult Cost</string>
+    <string name="psy_projection_cost">Psy Projection Cost</string>
+    <string name="secondary_abilities">Secondary Abilities</string>
+    <string name="intellectual_cost">Intellectual Cost</string>
+    <string name="social_cost">Social Cost</string>
+    <string name="perceptive_cost">Perceptive Cost</string>
+    <string name="vigor_cost">Vigor Cost</string>
+    <string name="subterfuge_cost">Subterfuge Cost</string>
+    <string name="athletics">Athletics</string>
+    <string name="athletics_cost">Athletics Cost</string>
+    <string name="creative_cost">Creative Cost</string>
+    <string name="reduced_costs">Reduced Costs</string>
+    <string name="primary_bonuses">Primary Bonuses</string>
+    <string name="secondary_bonuses">Secondary Bonuses</string>
+    <string name="special_bonuses">Special Bonuses</string>
 </resources>

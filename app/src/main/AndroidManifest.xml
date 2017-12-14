@@ -8,38 +8,80 @@
     <!-- Application -->
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logoapp"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".GeneralMenus.MainMenu" />
-        <activity android:name=".WorldOfDarkness.WOD_Menu" />
+        <activity
+            android:name=".WorldOfDarkness.WOD_Menu"
+            android:label="@string/activity_wod_main_menu" />
         <activity android:name=".WorldOfDarkness.WODVTM" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANS" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANS_Camarilla" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANSBrujah" />
-        <activity android:name=".WorldOfDarkness.BrujahHistoryVTM" />
-        <activity android:name=".WorldOfDarkness.charSheetVTM" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANSGangrel" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANSNosferatu" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANSMalkavian" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANSVentrue" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANSToreador" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANSTremere" />
-        <activity android:name=".WorldOfDarkness.WODVTMCLANS_Sabbat" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANS"
+            android:label="@string/activity_wod_vtm_clans" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANS_Camarilla"
+            android:label="@string/activity_wod_vtm_clans_camarilla" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANSBrujah"
+            android:label="@string/activity_wod_vtm_clans_brujah" />
+        <activity
+            android:name=".WorldOfDarkness.BrujahHistoryVTM"
+            android:label="@string/activity_wod_vtm_brujah_his" />
+        <activity
+            android:name=".WorldOfDarkness.charSheetVTM"
+            android:label="@string/activity_char_sheet" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANSGangrel"
+            android:label="@string/activity_wod_vtm_clans_gangrel" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANSNosferatu"
+            android:label="@string/activity_wod_vtm_clans_nosferatu" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANSMalkavian"
+            android:label="@string/activity_wod_vtm_clans_malkavian" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANSVentrue"
+            android:label="@string/activity_wod_vtm_clans_ventrue" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANSToreador"
+            android:label="@string/activity_wod_vtm_clans_toreador" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANSTremere"
+            android:label="@string/activity_wod_vtm_clans_tremere" />
+        <activity
+            android:name=".WorldOfDarkness.WODVTMCLANS_Sabbat"
+            android:label="@string/activity_wod_vtm_clans_sabbat" />
         <activity android:name=".BESM_Main_Menu" />
         <activity android:name=".charBESM" />
-        <activity android:name=".AnimaBeyondFantasy.ABFTools" />
-        <activity android:name=".AnimaBeyondFantasy.ABFCharGenMenu" />
-        <activity android:name=".AnimaBeyondFantasy.ABFCombatTools" />
+        <activity
+            android:name=".AnimaBeyondFantasy.ABFTools"
+            android:label="@string/activity_abf_main_menu" />
+        <activity
+            android:name=".AnimaBeyondFantasy.ABFCharGenMenu"
+            android:label="@string/activity_char_sheet" />
+        <activity
+            android:name=".AnimaBeyondFantasy.ABFCombatTools"
+            android:label="@string/activity_abf_combat_tools" />
         <activity android:name=".AnimaBeyondFantasy.ABFMeleeCombat" />
         <activity android:name=".AnimaBeyondFantasy.ABFConfigureMeleeCharacter" />
-        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_BasicInfo" />
-        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_ClassAndRace" />
-        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_CombatAbilities" />
-        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_MagicAbilities" />
-        <activity android:name=".AnimaBeyondFantasy.ABF_CharGen_Characteristics" />
+        <activity
+            android:name=".AnimaBeyondFantasy.ABF_CharGen_BasicInfo"
+            android:label="@string/activity_abf_basic_info" />
+        <activity
+            android:name=".AnimaBeyondFantasy.ABF_CharGen_ClassAndRace"
+            android:label="@string/activity_abf_class_race" />
+        <activity
+            android:name=".AnimaBeyondFantasy.ABF_CharGen_CombatAbilities"
+            android:label="@string/activity_abf_combat_abilities" />
+        <activity
+            android:name=".AnimaBeyondFantasy.ABF_CharGen_MagicAbilities"
+            android:label="@string/activity_abf_magic_abilities" />
+        <activity
+            android:name=".AnimaBeyondFantasy.ABF_CharGen_Characteristics"
+            android:label="@string/activity_abf_main_characteristics" />
         <activity android:name=".SaveToFile" />
         <activity android:name=".PandPMainMenu">
             <intent-filter>
@@ -49,7 +91,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".GeneralMenus.Login" />
-        <activity android:name=".GeneralMenus.LoadCharacter"></activity>
+        <activity android:name=".GeneralMenus.LoadCharacter" />
+        <activity android:name=".AnimaBeyondFantasy.ABF_Magic_Abilities" />
+        <activity android:name=".AnimaBeyondFantasy.ABF_add_category"></activity>
     </application>
 
 </manifest>

@@ -5,8 +5,10 @@ package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model;
  */
 
 public class Constants {
+    public final static String regex = "---";
     ///< Class Constants
     public final static String ClassABFCharacter            = "class_abf_character";
+    public final static String ClassABFCategory = "class_abf_category";
     public final static String DatabaseConnectorClass       = "DatabaseConnectorClass";
     public final static String UserClass                    = "UserClass";
     ///< Database EICollection/Document Constants

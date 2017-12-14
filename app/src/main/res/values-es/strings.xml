@@ -253,7 +253,9 @@
         <item>Guerrero</item>
         <item>Guerrero Acróbata</item>
         <item>Paladín</item>
+        <item>Paladín (No Sobrenatural)</item>
         <item>Paladín Oscuro</item>
+        <item>Paladín Oscuro (No Sobrenatural)</item>
         <item>Maestro de Armas</item>
         <item>Tecnicísta</item>
         <item>Tao</item>
@@ -563,4 +565,36 @@
     <string name="fail_save">Error de guardado!</string>
     <string name="edit_char_text">Selecciona el personaje que quieres editar</string>
     <string name="no_data">No hay datos de ese personaje para este juego</string>
+    <string name="activity_abf_main_menu">Anima Beyond Fantasy</string>
+    <string name="activity_wod_main_menu">Mundo de Tinieblas</string>
+    <string name="activity_wod_vtm_clans">Clanes</string>
+    <string name="activity_wod_vtm_clans_camarilla">Clanes de la Camarilla</string>
+    <string name="activity_wod_vtm_clans_brujah">Clan Brujah</string>
+    <string name="activity_wod_vtm_brujah_his">Historia del Clan Brujah</string>
+    <string name="activity_char_sheet">Hoja de Personaje</string>
+    <string name="activity_wod_vtm_clans_gangrel">Clan Gangrel</string>
+    <string name="activity_wod_vtm_clans_nosferatu">Clan Nosferatu</string>
+    <string name="activity_wod_vtm_clans_malkavian">Clan Malkavian</string>
+    <string name="activity_wod_vtm_clans_ventrue">Clan Ventrue</string>
+    <string name="activity_wod_vtm_clans_toreador">Clan Toreador</string>
+    <string name="activity_wod_vtm_clans_tremere">Clan Tremere</string>
+    <string name="activity_wod_vtm_clans_sabbat">Clanes del Sabbat</string>
+    <string name="activity_abf_combat_tools">Herramientas de Combate</string>
+    <string name="activity_abf_basic_info">Información Básica</string>
+    <string name="activity_abf_class_race">Clase y Raza</string>
+    <string name="activity_abf_combat_abilities">Habilidades de Combate</string>
+    <string name="activity_abf_magic_abilities">Habilidades Mágicas</string>
+    <string name="activity_abf_main_characteristics">Características</string>
+    <string name="activity_abf_ki_abilities">Habilidades Ki</string>
+    <string name="activity_abf_psi_abilities">Habilidades Psíquicas</string>
+    <string name="activity_abf_secondary_abilities">Habilidades Secundarias</string>
+    <string name="activity_inventory">Inventario</string>
+    <string name="activity_load_character">Menu de Carga de Personajes</string>
+    <string name="char_level">Nivel:</string>
+    <string name="zeon">Zeon</string>
+    <string name="cat">CAT</string>
+    <string name="act">ACT</string>
+    <string name="points">Puntos</string>
+    <string name="level">Nivel</string>
+    <string name="spe">Esp</string>
 </resources>

@@ -82,6 +82,7 @@ public class ABFCharacter implements Parcelable, Serializable {
         Log.d("INFO","Loading Secondary Abilities for the first time");
         secondAbilities = new SecondAbilities();
         editMode = true;
+        this.category = "";
     }
 
     protected ABFCharacter(Parcel in) {
@@ -642,5 +643,49 @@ public class ABFCharacter implements Parcelable, Serializable {
     public boolean similar(ABFCharacter aux2) {
         ///< TODO similar character sheet method (Checks name and stats)
         return true;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+
+        ABFCharacter that = (ABFCharacter) o;
+
+        return (getName() != null ? !getName().equals(that.getName()) : that.getName() != null);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = getName() != null ? getName().hashCode() : 0;
+        result = 31 * result + getAge();
+        result = 31 * result + (getCategory() != null ? getCategory().hashCode() : 0);
+        result = 31 * result + (getGender() != null ? getGender().hashCode() : 0);
+        result = 31 * result + (getRace() != null ? getRace().hashCode() : 0);
+        result = 31 * result + (getNationality() != null ? getNationality().hashCode() : 0);
+        result = 31 * result + (getEthnicity() != null ? getEthnicity().hashCode() : 0);
+        result = 31 * result + (getSocial_Status() != null ? getSocial_Status().hashCode() : 0);
+        result = 31 * result + getSocial_Status_int();
+        result = 31 * result + getLevel();
+        result = 31 * result + getDP_total();
+        result = 31 * result + getDP_used();
+        result = 31 * result + getCP_total();
+        result = 31 * result + getCP_used();
+        result = 31 * result + (isFirstTime() ? 1 : 0);
+        result = 31 * result + (getAdvantagesDisadvantages() != null ? getAdvantagesDisadvantages().hashCode() : 0);
+        result = 31 * result + (getLifePointsCounter() != null ? getLifePointsCounter().hashCode() : 0);
+        result = 31 * result + (getTurnCounter() != null ? getTurnCounter().hashCode() : 0);
+        result = 31 * result + getAppearance();
+        result = 31 * result + (getCombatAbilities() != null ? getCombatAbilities().hashCode() : 0);
+        result = 31 * result + (getSecondAbilities() != null ? getSecondAbilities().hashCode() : 0);
+        result = 31 * result + (getInventory() != null ? getInventory().hashCode() : 0);
+        result = 31 * result + (getWeaponCharts() != null ? getWeaponCharts().hashCode() : 0);
+        result = 31 * result + (getResistances() != null ? getResistances().hashCode() : 0);
+        result = 31 * result + (getMartialArtsCharts() != null ? getMartialArtsCharts().hashCode() : 0);
+        result = 31 * result + (isEditMode() ? 1 : 0);
+        result = 31 * result + (isPsiPowers() ? 1 : 0);
+        result = 31 * result + (getPsiPowersCharts() != null ? getPsiPowersCharts().hashCode() : 0);
+        result = 31 * result + (isMagic() ? 1 : 0);
+        result = 31 * result + (getABFMagic() != null ? getABFMagic().hashCode() : 0);
+        return result;
     }
 }

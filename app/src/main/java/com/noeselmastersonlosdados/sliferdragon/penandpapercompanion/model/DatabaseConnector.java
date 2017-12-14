@@ -17,6 +17,7 @@ import com.google.firebase.firestore.SetOptions;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFCharacter;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.Ability;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.Data.ABFAbilityData;
+import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.Data.Category;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.Data.GeneralInfo;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.SecondAbilities;
 
@@ -35,6 +36,14 @@ public class DatabaseConnector {
         }
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         Constants.setUserIdentifier(user.getUid());
+    }
+
+    public void addCategoryToGeneral(Category c) {
+        db.collection(Constants.CollectionABF)
+                .document(Constants.CollectionABFGeneralInfo)
+                .collection(Constants.CollectionABFClassRelated)
+                .document(c.getName())
+                .set(c, SetOptions.merge());
     }
 
     /**
