@@ -1,4 +1,4 @@
-package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy;
+package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.View;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

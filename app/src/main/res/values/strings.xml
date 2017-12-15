@@ -646,6 +646,11 @@
     <string name="primary_bonuses">Primary Bonuses</string>
     <string name="secondary_bonuses">Secondary Bonuses</string>
     <string name="special_bonuses">Special Bonuses</string>
+    <string name="translate_the_category_to_the_given_languages">Translate the category to the given languages.</string>
+    <string name="spanish">Spanish</string>
+    <string name="remember_translate">Remember that, in order to get the category published in the general database, you need to add all languages.</string>
+    <string name="english">English</string>
+    <string name="validate_translation">Validate Translation</string>
     <string-array name="abf_archetypes">
         <item>Fighter</item>
         <item>Mystic</item>

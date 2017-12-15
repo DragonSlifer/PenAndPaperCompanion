@@ -13,11 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABFTools;
+import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.View.ABFTools;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.BESM_Main_Menu;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.R;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.WorldOfDarkness.WOD_Menu;
-import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.DatabaseConnector;
 
 
 public class MainMenu extends AppCompatActivity

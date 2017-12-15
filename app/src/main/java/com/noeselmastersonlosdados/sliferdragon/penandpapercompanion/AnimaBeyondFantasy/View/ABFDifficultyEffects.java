@@ -1,4 +1,4 @@
-package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy;
+package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.View;
 
 import android.os.Parcel;
 import android.os.Parcelable;

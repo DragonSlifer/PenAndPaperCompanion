@@ -1,8 +1,8 @@
-package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy;
+package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.View;
 
 import android.content.res.Configuration;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -11,8 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.Model.ABFToolsSaveData;
-import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.MultiSelectionSpinner;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.R;
+import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.MultiSelectionSpinner;
 
 import java.util.ArrayList;
 import java.util.Arrays;

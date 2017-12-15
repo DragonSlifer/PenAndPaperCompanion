@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_row="6"
     android:background="@drawable/anima_magic_background_landscape"
-    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABF_CharGen_MagicAbilities"
+    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.View.ABF_CharGen_MagicAbilities"
     tools:layout_editor_absoluteY="25dp">
 
     <ScrollView

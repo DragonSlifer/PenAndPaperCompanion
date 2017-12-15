@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/anima_char_gen_landscape"
     android:minHeight="250dp"
-    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABFCharGenMenu"
+    tools:context="com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.View.ABFCharGenMenu"
     tools:layout_editor_absoluteY="25dp">
 
     <ScrollView

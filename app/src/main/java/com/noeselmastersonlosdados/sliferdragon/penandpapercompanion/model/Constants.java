@@ -52,9 +52,13 @@ public class Constants {
     //400-450 (Error Result Codes)
     //451-499
     //500-550 (Request codes)
-    public final static int REQUEST_NULL = 500;     ///< There's no request
-    public final static int REQUEST_SAVEDATA = 501; ///< Request Save Data Class
-    public final static int REQUEST_LOADCHAR = 502; ///< Request Load Character Data
+    public final static int REQUEST_NULL = 500;                     ///< There's no request
+    public final static int REQUEST_SAVEDATA = 501;                 ///< Request Save Data Class
+    public final static int REQUEST_LOADCHAR = 502;                 ///< Request Load Character Data
+    public final static int REQUEST_ABF_CAT_TRANSLATION = 503;      ///< Request ABF Category Translation
+    public final static int REQUEST_ABF_CAT_PRIMARY_MOD = 504;      ///< Request ABF Primary modifiers
+    public final static int REQUEST_ABF_CAT_SECONDARY_MOD = 505;    ///< Request ABF Secondary modifiers
+    public final static int REQUEST_ABF_CAT_SPECIAL_MOD = 506;      ///< Request ABF Special modifiers
     ///< Extra Intent Parameter Identifiers Constants
     public final static String EIForWritting = "EIForWritting";
     public final static String EIObjectType = "EIObjectType";
@@ -65,6 +69,8 @@ public class Constants {
     public final static String EIGameCollection = "EIGameCollection";
     public final static String EIUserCollection = "EIUserCollection";
     public final static String EIObjectData = "EIObjectData";
+    public final static String EIArrayInteger = "EIArrayInteger";
+    public final static String EIArrayString = "EIArrayString";
     ///< Tag Class (Used for Log)
     public final static String DatabaseConnectorTAG         = "DB_CONNECTOR";
     public final static String UserTAG                      = "USER";

@@ -1,5 +1,6 @@
-package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy;
+package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.View;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.R;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.Constants;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.DatabaseConnector;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.MultiSelectionSpinner;
+import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.Translation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +28,7 @@ public class ABF_add_category extends AppCompatActivity {
     private String items[] = {"10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%"};
     private ArrayList<String> catNames;
     private ArrayList<String> archetypes;
-
+    private ArrayList<String> archetypesDefault;
     private AutoCompleteTextView categoryName;
     private MultiSelectionSpinner archetypeSpinner;
     private Spinner combatLimit, supernaturalLimit, psychicLimit;
@@ -41,19 +43,44 @@ public class ABF_add_category extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_abf_add_category);
-
+        databaseConnector = new DatabaseConnector();
         if (savedInstanceState != null) {
             category = savedInstanceState.getParcelable(Constants.ClassABFCategory);
         } else {
             category = new Category();
         }
-
-        getDatabaseCategoryNames();
-
         categoryName = findViewById(R.id.catName);
-        categoryName.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_dropdown_item_1line, catNames));
+
+        FirebaseFirestore db = (databaseConnector = new DatabaseConnector()).getDb();
+        db.collection(Constants.CollectionABF).document(Constants.CollectionABFGeneralInfo)
+                .collection(Constants.CollectionABFClassRelated)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot documentSnapshots) {
+                        catNames = new ArrayList<>();
+                        for (DocumentSnapshot documentSnapshot : documentSnapshots) {
+                            if (documentSnapshot != null) {
+                                catNames.add(documentSnapshot.toObject(Category.class).getName());
+                            }
+                        }
+                        categoryName.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_dropdown_item_1line, catNames));
+                    }
+                });
+
         archetypeSpinner = findViewById(R.id.archetypeSpinner);
-        archetypeSpinner.setItems(getResources().getStringArray(R.array.abf_archetypes));
+        archetypes = new ArrayList<>();
+        archetypesDefault = new ArrayList<>();
+        for (String arc : getResources().getStringArray(R.array.abf_archetypes)) {
+            archetypes.add(arc);
+        }
+        /*if(Locale.getDefault() != getResources().getConfiguration().locale){    ///< This is for internal purposes
+            archetypesDefault = new ArrayList<>();
+            for(String arc : GeneralMethods.getArrayStringByDefaultLocal(this,R.array.abf_archetypes)){
+                archetypesDefault.add(arc);
+            }
+        }*/
+        archetypeSpinner.setItems(archetypes);
 
         combatLimit = findViewById(R.id.combatLimit);
         combatLimit.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, items));
@@ -65,6 +92,7 @@ public class ABF_add_category extends AppCompatActivity {
         hpMultCost = findViewById(R.id.hpMultCost);
         hpPerLevel = findViewById(R.id.hpPerLevel);
         turnPerLevel = findViewById(R.id.cmPerLevel);
+        cmPerLevel = findViewById(R.id.cmPerLevel);
         cvPerIntervalLevel = findViewById(R.id.cvPerIntervalLevel);
         cvInterval = findViewById(R.id.cvInterval);
         atkCost = findViewById(R.id.atkCost);
@@ -144,7 +172,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = hpMultCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setHp_mult(Integer.parseInt(text));
                 }
             }
@@ -153,7 +181,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = hpPerLevel.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setHp_per_level(Integer.parseInt(text));
                 }
             }
@@ -162,8 +190,17 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = turnPerLevel.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setTurn_per_level(Integer.parseInt(text));
+                }
+            }
+        });
+        cmPerLevel.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                String text = turnPerLevel.getText().toString();
+                if (!hasFocus && text != "" && text != null) {
+                    category.getModifiers().setCm_per_level(Integer.parseInt(text));
                 }
             }
         });
@@ -171,7 +208,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = cvPerIntervalLevel.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setCv_per_level(Integer.parseInt(text));
                 }
             }
@@ -180,7 +217,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = cvInterval.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setCv_interval(Integer.parseInt(text));
                 }
             }
@@ -189,7 +226,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = atkCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setAtk_cost(Integer.parseInt(text));
                 }
             }
@@ -198,7 +235,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = blkCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setBlk_cost(Integer.parseInt(text));
                 }
             }
@@ -207,7 +244,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = ddgCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setDdg_cost(Integer.parseInt(text));
                 }
             }
@@ -216,7 +253,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = armCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setArm_cost(Integer.parseInt(text));
                 }
             }
@@ -225,7 +262,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = kiCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setKi_cost(Integer.parseInt(text));
                 }
             }
@@ -234,7 +271,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = accumKiCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setAccum_mult_cost(Integer.parseInt(text));
                 }
             }
@@ -243,7 +280,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = zeonCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setZeon_cost(Integer.parseInt(text));
                 }
             }
@@ -252,7 +289,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = zeonAdd.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setZeon_add(Integer.parseInt(text));
                 }
             }
@@ -261,7 +298,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = actCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setAct_mult_cost(Integer.parseInt(text));
                 }
             }
@@ -270,7 +307,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = magProjCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setMag_proj_cost(Integer.parseInt(text));
                 }
             }
@@ -279,7 +316,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = convCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setConv_cost(Integer.parseInt(text));
                 }
             }
@@ -288,7 +325,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = controlCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setDom_cost(Integer.parseInt(text));
                 }
             }
@@ -297,7 +334,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = bindCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setBind_cost(Integer.parseInt(text));
                 }
             }
@@ -306,7 +343,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = banishCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setDesummon_cost(Integer.parseInt(text));
                 }
             }
@@ -315,7 +352,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = cvCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setCv_mult_cost(Integer.parseInt(text));
                 }
             }
@@ -324,7 +361,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = psyProjCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setPsi_proj_cost(Integer.parseInt(text));
                 }
             }
@@ -333,7 +370,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = atlCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setAtl_cost(Integer.parseInt(text));
                 }
             }
@@ -342,7 +379,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = socCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setSoc_cost(Integer.parseInt(text));
                 }
             }
@@ -351,7 +388,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = perCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setPer_cost(Integer.parseInt(text));
                 }
             }
@@ -360,7 +397,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = intCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setInt_cost(Integer.parseInt(text));
                 }
             }
@@ -369,7 +406,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = vigCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setVig_cost(Integer.parseInt(text));
                 }
             }
@@ -378,7 +415,7 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = subCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setSub_cost(Integer.parseInt(text));
                 }
             }
@@ -387,30 +424,11 @@ public class ABF_add_category extends AppCompatActivity {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 String text = creCost.getText().toString();
-                if (!hasFocus) {
+                if (!hasFocus && text != "" && text != null) {
                     category.getModifiers().setCre_cost(Integer.parseInt(text));
                 }
             }
         });
-    }
-
-    private void getDatabaseCategoryNames() {
-        FirebaseFirestore db = databaseConnector.getDb();
-
-        db.collection(Constants.CollectionABF).document(Constants.CollectionABFGeneralInfo)
-                .collection(Constants.CollectionABFClassRelated)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot documentSnapshots) {
-
-                        for (DocumentSnapshot documentSnapshot : documentSnapshots) {
-                            if (documentSnapshot != null) {
-                                catNames.add(documentSnapshot.toObject(Category.class).getName());
-                            }
-                        }
-                    }
-                });
     }
 
     private float getPercentageFromText(String text) {
@@ -447,6 +465,34 @@ public class ABF_add_category extends AppCompatActivity {
         }
 
         return txt;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case Constants.REQUEST_ABF_CAT_TRANSLATION:
+                this.category.setTranslation((Translation) data.getParcelableExtra(Constants.EIObjectData));
+                break;
+            case Constants.REQUEST_ABF_CAT_PRIMARY_MOD:
+                this.category.getModifiers().setPrimaryBonuses(data.getIntegerArrayListExtra(Constants.EIArrayInteger));
+                this.category.getModifiers().setPrimaryBonusesString(data.getStringArrayListExtra(Constants.EIArrayString));
+                break;
+            case Constants.REQUEST_ABF_CAT_SECONDARY_MOD:
+                this.category.getModifiers().setSecondaryBonuses(data.getIntegerArrayListExtra(Constants.EIArrayInteger));
+                this.category.getModifiers().setSecondaryBonusesString(data.getStringArrayListExtra(Constants.EIArrayString));
+                break;
+            case Constants.REQUEST_ABF_CAT_SPECIAL_MOD:
+                this.category.getModifiers().setSpecialBonuses(data.getIntegerArrayListExtra(Constants.EIArrayInteger));
+                this.category.getModifiers().setSpecialBonusesString(data.getStringArrayListExtra(Constants.EIArrayString));
+                break;
+        }
+    }
+
+    public void goto_abf_add_category_translation(View view) {
+        Intent i = new Intent(this, ABF_add_category_translation.class);
+        i.putExtra(Constants.EIObjectData, category.getTranslation());
+        startActivityForResult(i, Constants.REQUEST_ABF_CAT_TRANSLATION);
     }
 
 

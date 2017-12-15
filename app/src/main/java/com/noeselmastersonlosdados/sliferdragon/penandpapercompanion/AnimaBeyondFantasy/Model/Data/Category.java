@@ -20,6 +20,8 @@ public class Category implements Parcelable {
     private List<String> archetypes;
 
     public Category() {
+        translation = new Translation();
+        modifiers = new Modifiers();
     }
 
     public Category(String name, int arrayPos, Modifiers modifiers, Translation translation, boolean official, List<String> archetypes) {

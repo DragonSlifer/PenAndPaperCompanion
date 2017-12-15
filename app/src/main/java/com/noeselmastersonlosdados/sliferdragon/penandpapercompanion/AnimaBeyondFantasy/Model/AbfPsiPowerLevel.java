@@ -3,7 +3,7 @@ package com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyon
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABFDifficultyEffects;
+import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.View.ABFDifficultyEffects;
 
 import java.io.Serializable;
 import java.util.ArrayList;

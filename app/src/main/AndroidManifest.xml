@@ -57,30 +57,30 @@
         <activity android:name=".BESM_Main_Menu" />
         <activity android:name=".charBESM" />
         <activity
-            android:name=".AnimaBeyondFantasy.ABFTools"
+            android:name=".AnimaBeyondFantasy.View.ABFTools"
             android:label="@string/activity_abf_main_menu" />
         <activity
-            android:name=".AnimaBeyondFantasy.ABFCharGenMenu"
+            android:name=".AnimaBeyondFantasy.View.ABFCharGenMenu"
             android:label="@string/activity_char_sheet" />
         <activity
-            android:name=".AnimaBeyondFantasy.ABFCombatTools"
+            android:name=".AnimaBeyondFantasy.View.ABFCombatTools"
             android:label="@string/activity_abf_combat_tools" />
-        <activity android:name=".AnimaBeyondFantasy.ABFMeleeCombat" />
-        <activity android:name=".AnimaBeyondFantasy.ABFConfigureMeleeCharacter" />
+        <activity android:name=".AnimaBeyondFantasy.View.ABFMeleeCombat" />
+        <activity android:name=".AnimaBeyondFantasy.View.ABFConfigureMeleeCharacter" />
         <activity
-            android:name=".AnimaBeyondFantasy.ABF_CharGen_BasicInfo"
+            android:name=".AnimaBeyondFantasy.View.ABF_CharGen_BasicInfo"
             android:label="@string/activity_abf_basic_info" />
         <activity
-            android:name=".AnimaBeyondFantasy.ABF_CharGen_ClassAndRace"
+            android:name=".AnimaBeyondFantasy.View.ABF_CharGen_ClassAndRace"
             android:label="@string/activity_abf_class_race" />
         <activity
-            android:name=".AnimaBeyondFantasy.ABF_CharGen_CombatAbilities"
+            android:name=".AnimaBeyondFantasy.View.ABF_CharGen_CombatAbilities"
             android:label="@string/activity_abf_combat_abilities" />
         <activity
-            android:name=".AnimaBeyondFantasy.ABF_CharGen_MagicAbilities"
+            android:name=".AnimaBeyondFantasy.View.ABF_CharGen_MagicAbilities"
             android:label="@string/activity_abf_magic_abilities" />
         <activity
-            android:name=".AnimaBeyondFantasy.ABF_CharGen_Characteristics"
+            android:name=".AnimaBeyondFantasy.View.ABF_CharGen_Characteristics"
             android:label="@string/activity_abf_main_characteristics" />
         <activity android:name=".SaveToFile" />
         <activity android:name=".PandPMainMenu">
@@ -92,8 +92,9 @@
         </activity>
         <activity android:name=".GeneralMenus.Login" />
         <activity android:name=".GeneralMenus.LoadCharacter" />
-        <activity android:name=".AnimaBeyondFantasy.ABF_Magic_Abilities" />
-        <activity android:name=".AnimaBeyondFantasy.ABF_add_category"></activity>
+        <activity android:name=".AnimaBeyondFantasy.View.ABF_Magic_Abilities" />
+        <activity android:name=".AnimaBeyondFantasy.View.ABF_add_category" />
+        <activity android:name=".AnimaBeyondFantasy.View.ABF_add_category_translation"></activity>
     </application>
 
 </manifest>

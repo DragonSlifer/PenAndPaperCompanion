@@ -5,24 +5,33 @@ import android.os.Parcelable;
 
 /**
  * Created by Jorge on 12/12/2017.
+ * Class that organizes the translations.
+ * TODO Agregar lenguajes: Ucraniano, Valenciano, ...
  */
 
 public class Translation implements Parcelable {
     private String defaultLang;
     private String es_translation;
+    private boolean complete;
 
     public Translation() {
+        defaultLang = "";
+        es_translation = "";
+
+        complete = false;
     }
 
     protected Translation(Parcel in) {
         defaultLang = in.readString();
         es_translation = in.readString();
+        complete = in.readByte() != 0;
     }
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(defaultLang);
         dest.writeString(es_translation);
+        dest.writeByte((byte) (complete ? 1 : 0));
     }
 
     @Override
@@ -56,5 +65,13 @@ public class Translation implements Parcelable {
 
     public void setEs_translation(String es_translation) {
         this.es_translation = es_translation;
+    }
+
+    public boolean isComplete() {
+        return complete;
+    }
+
+    public void setComplete(boolean complete) {
+        this.complete = complete;
     }
 }

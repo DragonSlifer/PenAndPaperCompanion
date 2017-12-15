@@ -13,7 +13,7 @@ import com.firebase.ui.auth.IdpResponse;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.ABFTools;
+import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.AnimaBeyondFantasy.View.ABFTools;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.WorldOfDarkness.WOD_Menu;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.Constants;
 import com.noeselmastersonlosdados.sliferdragon.penandpapercompanion.model.GeneralMethods;
